@@ -1,0 +1,28 @@
+{
+  "name": "textbuddy",
+  "version": "1.0.0",
+  "description": "TextBuddy is a JavaScript module for text analysis. Engineered to be your friendly digital sidekick, TextBuddy can assist you with a wide range of tasks - from simple word count and keyword extraction to advanced analysis with AI-integration.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ta223dh/TextBuddy.git"
+  },
+  "keywords": [
+    "Text",
+    "analyzer",
+    "Text",
+    "analyser",
+    "Text",
+    "buddy"
+  ],
+  "author": "Tobias Aihonen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ta223dh/TextBuddy/issues"
+  },
+  "homepage": "https://github.com/ta223dh/TextBuddy#readme"
+}
