@@ -6,3 +6,4 @@ let buddy = new TextBuddy(text)
 
 console.log (buddy.getText())
 console.log (buddy.getWordCount())
+console.log (buddy.getFullAnalyzis())
