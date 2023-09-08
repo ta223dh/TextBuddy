@@ -38,6 +38,8 @@ test('Word count', t => {
     new TextBuddy('Five Words . , *').getWordCount() === 5 ? t.pass() : t.fail() 
     new TextBuddy('Six Words six words SIX WORDS').getWordCount() === 6 ? t.pass() : t.fail() 
     new TextBuddy('SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN').getWordCount() === 7 ? t.pass() : t.fail() 
+    //new TextBuddy('\n\n').getWordCount() === 0 ? t.pass() : t.fail() 
+    //new TextBuddy('     ').getWordCount() === 0 ? t.pass() : t.fail() 
   })
 
 
