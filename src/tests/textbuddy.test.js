@@ -5,8 +5,7 @@ import TextBuddy from '../TextBuddy/textbuddy.js'
  * Test 1
  * Try invalid input values()
  */
-
-test('tryInvalidValues', t => {
+test('Invalid values', t => {
   function tryInvalidValues (inputFunction) {
     try {
       inputFunction()
@@ -29,8 +28,7 @@ test('tryInvalidValues', t => {
  * Test 2
  * getWordCount()
  */
-
-test('getWordCount', t => {
+test('Word count', t => {
     new TextBuddy('').getWordCount() === 0 ? t.pass() : t.fail() 
     new TextBuddy('OneWord').getWordCount() === 1 ? t.pass() : t.fail() 
     new TextBuddy('Two Words').getWordCount() === 2 ? t.pass() : t.fail() 
@@ -39,7 +37,7 @@ test('getWordCount', t => {
     new TextBuddy('OneWord          ').getWordCount() === 1 ? t.pass() : t.fail() 
     new TextBuddy('Five Words . , *').getWordCount() === 5 ? t.pass() : t.fail() 
     new TextBuddy('Six Words six words SIX WORDS').getWordCount() === 6 ? t.pass() : t.fail() 
-    new TextBuddy('SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN').getWordCount() === 6 ? t.pass() : t.fail() 
+    new TextBuddy('SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN').getWordCount() === 7 ? t.pass() : t.fail() 
   })
 
 

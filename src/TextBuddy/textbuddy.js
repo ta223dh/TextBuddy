@@ -27,8 +27,12 @@ class TextBuddy {
      */
     getWordCount () {
         if (!this.#wordCount) {
-            const spaces = /\s+/g // Regex
-            this.#wordCount = this.#text.trim().replace(spaces, ' ').split(' ').length
+            if (this.#text.length === 0) {
+                this.#wordCount = 0 
+            } else {
+                const spaces = /\s+/g // Regex
+                this.#wordCount = this.#text.trim().replace(spaces, ' ').split(' ').length    
+            }
         }
         return this.#wordCount
     }
