@@ -2,7 +2,7 @@ class TextBuddy {
     #text
     #wordCount
     #friendly
-    constructor (text, friendly = true) {
+    constructor (text, friendly = false) {
         this.#text = text
         this.#friendly = friendly
         this.#wordCount = null
