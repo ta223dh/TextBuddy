@@ -19,6 +19,12 @@ class TextBuddy {
     getText () {
         return this.#text
     }
+
+    /**
+     * Returns the word count.
+     *
+     * @returns {number} The number of words in the text.
+     */
     getWordCount () {
         if (!this.#wordCount) {
             const spaces = /\s+/g // Regex
