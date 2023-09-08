@@ -42,6 +42,26 @@ test('Word count', t => {
     //new TextBuddy('     ').getWordCount() === 0 ? t.pass() : t.fail() 
   })
 
-
+/**
+ * Test 3
+ * getCharacterCount()
+ */
+test('Character count', t => {
+  new TextBuddy('').getCharacterCount() === 0 ? t.pass() : t.fail() 
+  new TextBuddy(' ').getCharacterCount() === 1 ? t.pass() : t.fail() 
+  new TextBuddy('!').getCharacterCount() === 1 ? t.pass() : t.fail() 
+  new TextBuddy('Four').getCharacterCount() === 4 ? t.pass() : t.fail() 
+  new TextBuddy('Five ').getCharacterCount() === 5 ? t.pass() : t.fail() 
+})
  
-
+/**
+ * Test 3
+ * getCharacterCountExcludingSpaces()
+ */
+test('Character count exluding spaces', t => {
+  new TextBuddy('').getCharacterCountExcludingSpaces() === 0 ? t.pass() : t.fail() 
+  new TextBuddy(' ').getCharacterCountExcludingSpaces() === 0 ? t.pass() : t.fail() 
+  new TextBuddy('!').getCharacterCountExcludingSpaces() === 1 ? t.pass() : t.fail() 
+  new TextBuddy('Four').getCharacterCountExcludingSpaces() === 4 ? t.pass() : t.fail() 
+  new TextBuddy('Five ').getCharacterCountExcludingSpaces() === 4 ? t.pass() : t.fail() 
+})

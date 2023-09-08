@@ -11,8 +11,9 @@ class TextBuddy {
 
     getFullAnalyzis () {
         return {
-            wordCount: this.getWordCount(),
-            characterCount: this.#text.length
+            "Word count" : this.getWordCount(),
+            "Character count": this.getCharacterCount(),
+            "Character count excluding spaces": this.getCharacterCountExcludingSpaces()
         }
     }
 
@@ -35,6 +36,24 @@ class TextBuddy {
             }
         }
         return this.#wordCount
+    }
+
+    /**
+     * Returns the character count.
+     *
+     * @returns {number} The number of characters in the text.
+     */
+    getCharacterCount () {
+        return this.#text.length
+    }
+
+    /**
+     * Returns the character count excluding spaces.
+     *
+     * @returns {number} The number of characters (excluding spaces) in the text.
+     */
+    getCharacterCountExcludingSpaces () {
+        return this.#text.replaceAll(' ', '').length
     }
 
     #greeting() {
