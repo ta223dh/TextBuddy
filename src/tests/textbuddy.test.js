@@ -111,17 +111,21 @@ test('Longest word', t => {
  * averageWordLength()
  */
 test('Average word length', t => {
-  console.log('test1')
   new TextBuddy('').averageWordLength() === 0 ? t.pass() : t.fail() 
-  console.log('test12')
-
   new TextBuddy(' ').averageWordLength() === 0 ? t.pass() : t.fail() 
-  console.log('test3')
-
   new TextBuddy('Four four four four').averageWordLength() === 4 ? t.pass() : t.fail() 
-  console.log('test4')
-
   new TextBuddy('The average is').averageWordLength() === 4 ? t.pass() : t.fail() 
+})
+
+/**
+ * Test 9
+ * estimatedReadingTimeInMinutes()
+ */
+test('Estimated reading time in minutes', t => {
+  new TextBuddy('').esimatedReadingTimeInMinutes() === 0 ? t.pass() : t.fail() 
+  new TextBuddy(' ').esimatedReadingTimeInMinutes() === 0 ? t.pass() : t.fail() 
+  new TextBuddy('One').esimatedReadingTimeInMinutes() === 0.005 ? t.pass() : t.fail() 
+  new TextBuddy('happened creditcard tyan huf henrietta thomas rational dopod springhill woven foundational hometwat muzzle esse breakfast skilling updates polymerase newbie arrangement ihc xvii jar zithromax aix archivists crust powershot vivo dunwoody proposals annualized centrino touched rabble foals plank atty fielding violator gon thunderstorm unbundled rescues decipher fad concluded uploader carat gimp oyster flowering paid perle gof derrick faxpress techspot harmonics motogp gti urbanization thornton amphitheater heterosexual infect sounds escudo emptiness steelhead moda nonspecific malay turtleneck labelle followed smyth sight delicately foresee answer vijay faulkner pentium babysitter naughty handicapper sbs graf pissed rangers cancers consonants drama gothenburg imprinted commercially disgrace smashing conjure castles westgate compressor sions golan subscription transformers collaboration naruto generics arise compassion eager ivillage straight discounted grasses circumstances haney atherton montgomery cardboard classpath freezing degenerative proverb swedish webster obedience superior jewellery albanians trendnet motrin antcn fu fraught driver subways dragoon condemned tendered important nick irt touchstone spongebob draper clumps occupy moblog msb scrubbed roh scaffold quickly blakely flavour passports packer bermuda hypocritical gorillas oboe nrc inspectorate html happiest nakamura boardhost coleman they difficult pedersen cooper iota talking clan objections intercity canada hardcore sobbing deactivate me brow stamina quod competitor bmj pesca labtec mattress hookups landowners petitioner renee flop abrahams frighten').esimatedReadingTimeInMinutes() === 1 ? t.pass() : t.fail() 
 })
 
 

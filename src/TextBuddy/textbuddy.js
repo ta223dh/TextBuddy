@@ -14,7 +14,9 @@ class TextBuddy {
             "Character count excluding spaces": this.characterCountExcludingSpaces(),
             "Word frequency": this.wordFrequency(),
             "Unique word count": this.uniqueWordCount(),
-            "Longest word": this.longestWord()
+            "Longest word": this.longestWord(),
+            "Average word length": this.averageWordLength(),
+            "Estimated reading time in minutes": this.esimatedReadingTimeInMinutes()
         }
     }
 
@@ -29,7 +31,7 @@ class TextBuddy {
      */
     wordCount () {
         if (!this.#wordCount) {
-            if (this.#text.length === 0) {
+            if (this.#text.trim().length === 0) {
                 this.#wordCount = 0 
             } else {
                 const spaces = /\s+/g // Regex
@@ -81,7 +83,7 @@ class TextBuddy {
         return wordFrequency
     }
 
-      /**
+    /**
      * Returns number representing the number of unique words.
      *
      * @returns {number} The number of unique words that occur in the text.
@@ -91,7 +93,7 @@ class TextBuddy {
         return Object.keys(wordFrequency).length
     }
 
-      /**
+    /**
      * Returns the longest word as a string.
      *
      * @returns {string} The longest word that occur in the text.
@@ -108,7 +110,7 @@ class TextBuddy {
         return longestWord
     }
 
-      /**
+    /**
      * Returns the average word length as a number.
      *
      * @returns {string} The average length of all the words that occur in the text.
@@ -127,6 +129,16 @@ class TextBuddy {
         }
 
         return combinedLength / numberOfWords
+    }
+
+    /**
+     * Returns the estimated reading time in minutes as a number.
+     *
+     * @returns {number} The estimated reading time in minutes.
+     */
+    esimatedReadingTimeInMinutes() {
+        /* Assumed 200 words per minute average speed */
+        return this.wordCount() / 200
     }
 }
 
