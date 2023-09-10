@@ -60,9 +60,9 @@ class TextBuddy {
     }
 
     /**
-     * Returns a json object with each uniqe word and frequency of the word.
+     * Returns a json object with each uniqe word and frequency of the word sorted with the most frequent word first.
      *
-     * @returns {Object} A json object with each uniqe word and frequency of the word.
+     * @returns {Object} A json object with each uniqe word and frequency of the word sorted by desc freq.
      */
     wordFrequency () {
         if(this.#text.trim().length === 0)
@@ -80,7 +80,12 @@ class TextBuddy {
                 wordFrequency[word] += 1
             }
         })
-        return wordFrequency
+
+        const array = Object.entries(wordFrequency)
+        const sortedArray = array.sort((a, b) => b[1] - a[1])
+        const sortedWordFrequency = Object.fromEntries(sortedArray)
+
+        return sortedWordFrequency
     }
 
     /**

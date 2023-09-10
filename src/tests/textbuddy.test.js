@@ -75,7 +75,7 @@ test('Word frequency', t => {
   compare(new TextBuddy(' ').wordFrequency(), {}) ? t.pass() : t.fail() 
   compare(new TextBuddy('One').wordFrequency(), {one: 1}) ? t.pass() : t.fail() 
   compare(new TextBuddy('Two two').wordFrequency(), {two: 2}) ? t.pass() : t.fail() 
-  compare(new TextBuddy('One two two').wordFrequency(), {one: 1, two: 2}) ? t.pass() : t.fail() 
+  compare(new TextBuddy('One two two').wordFrequency(), {two: 2, one: 1}) ? t.pass() : t.fail() 
 
   function compare(objectOne, objectTwo) {
     return Object.entries(objectOne).toString() === Object.entries(objectTwo).toString()
