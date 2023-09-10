@@ -1,12 +1,10 @@
 class TextBuddy {
     #text
     #wordCount
-    #friendly
-    constructor (text, friendly = false) {
+    constructor (text) {
         this.#text = text
         this.#friendly = friendly
         this.#wordCount = null
-        this.#greeting()
     }
 
     getFullAnalyzis () {
@@ -54,11 +52,6 @@ class TextBuddy {
      */
     getCharacterCountExcludingSpaces () {
         return this.#text.replaceAll(' ', '').length
-    }
-
-    #greeting() {
-        if(this.#friendly)
-        console.log('Hi there, Buddy! Thanks for constructing me. I have a feeling that this is the beginning of a fantastic new friendship. 🤓')
     }
 }
 
