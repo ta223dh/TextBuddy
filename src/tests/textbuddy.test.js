@@ -90,8 +90,20 @@ test('Number of unique words', t => {
   new TextBuddy('').uniqueWordCount() === 0 ? t.pass() : t.fail() 
   new TextBuddy('One').uniqueWordCount() === 1 ? t.pass() : t.fail() 
   new TextBuddy('One one').uniqueWordCount() === 1 ? t.pass() : t.fail() 
-  new TextBuddy('One Two Thee Four Five').uniqueWordCount() === 5 ? t.pass() : t.fail() 
+  new TextBuddy('One Two Three Four Five').uniqueWordCount() === 5 ? t.pass() : t.fail() 
   new TextBuddy('One one two two three three').uniqueWordCount() === 3 ? t.pass() : t.fail() 
+})
+
+/**
+ * Test 7
+ * longestWord()
+ */
+test('Longest word', t => {
+  new TextBuddy('').longestWord() === '' ? t.pass() : t.fail() 
+  new TextBuddy(' ').longestWord() === '' ? t.pass() : t.fail() 
+  new TextBuddy('One one').longestWord() === 'one' ? t.pass() : t.fail() 
+  new TextBuddy('One Two Three Four Five').longestWord() === 'three' ? t.pass() : t.fail() 
+  new TextBuddy('This is a long word: helicopter').longestWord() === 'helicopter' ? t.pass() : t.fail() 
 })
 
 

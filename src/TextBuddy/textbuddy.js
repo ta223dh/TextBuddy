@@ -13,7 +13,8 @@ class TextBuddy {
             "Character count": this.characterCount(),
             "Character count excluding spaces": this.characterCountExcludingSpaces(),
             "Word frequency": this.wordFrequency(),
-            "Unique word count": this.uniqueWordCount()
+            "Unique word count": this.uniqueWordCount(),
+            "Longest word": this.longestWord()
         }
     }
 
@@ -88,6 +89,23 @@ class TextBuddy {
       uniqueWordCount() {
         const wordFrequency = this.wordFrequency(this.#text)
         return Object.keys(wordFrequency).length
+    }
+
+      /**
+     * Returns the longest word as a string.
+     *
+     * @returns {string} The longest word that occur in the text.
+     */
+      longestWord() {
+        const wordFrequency = this.wordFrequency(this.#text)
+        let longestWord = ''
+
+        for (let word in wordFrequency) {
+            if (longestWord.length < word.length) {
+                longestWord = word
+            }
+        }
+        return longestWord
     }
 }
 
