@@ -107,6 +107,27 @@ class TextBuddy {
         }
         return longestWord
     }
+
+      /**
+     * Returns the average word length as a number.
+     *
+     * @returns {string} The average length of all the words that occur in the text.
+     */
+      averageWordLength() {
+        if(this.#text.trim().length === 0)
+        return 0
+
+        const wordFrequency = this.wordFrequency(this.#text)
+        let numberOfWords = 0
+        let combinedLength = 0
+
+        for (let [key, value] of Object.entries(wordFrequency)) {
+            combinedLength += key.length * value
+            numberOfWords += value
+        }
+
+        return combinedLength / numberOfWords
+    }
 }
 
 export default TextBuddy

@@ -106,4 +106,22 @@ test('Longest word', t => {
   new TextBuddy('This is a long word: helicopter').longestWord() === 'helicopter' ? t.pass() : t.fail() 
 })
 
+/**
+ * Test 8
+ * averageWordLength()
+ */
+test('Average word length', t => {
+  console.log('test1')
+  new TextBuddy('').averageWordLength() === 0 ? t.pass() : t.fail() 
+  console.log('test12')
+
+  new TextBuddy(' ').averageWordLength() === 0 ? t.pass() : t.fail() 
+  console.log('test3')
+
+  new TextBuddy('Four four four four').averageWordLength() === 4 ? t.pass() : t.fail() 
+  console.log('test4')
+
+  new TextBuddy('The average is').averageWordLength() === 4 ? t.pass() : t.fail() 
+})
+
 
