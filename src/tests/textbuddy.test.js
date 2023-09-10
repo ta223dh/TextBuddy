@@ -55,7 +55,7 @@ test('Character count', t => {
 })
 
 /**
- * Test 3
+ * Test 4
  * characterCountExcludingSpaces()
  */
 test('Character count exluding spaces', t => {
@@ -67,10 +67,12 @@ test('Character count exluding spaces', t => {
 })
 
 /**
- * Test 4
+ * Test 5
  * wordFrequency()
  */
-test('Word requency', t => {
+test('Word frequency', t => {
+  compare(new TextBuddy('').wordFrequency(), {}) ? t.pass() : t.fail() 
+  compare(new TextBuddy(' ').wordFrequency(), {}) ? t.pass() : t.fail() 
   compare(new TextBuddy('One').wordFrequency(), {one: 1}) ? t.pass() : t.fail() 
   compare(new TextBuddy('Two two').wordFrequency(), {two: 2}) ? t.pass() : t.fail() 
   compare(new TextBuddy('One two two').wordFrequency(), {one: 1, two: 2}) ? t.pass() : t.fail() 
@@ -80,5 +82,16 @@ test('Word requency', t => {
   }
 })
 
+/**
+ * Test 6
+ * uniqueWordCount()
+ */
+test('Number of unique words', t => {
+  new TextBuddy('').uniqueWordCount() === 0 ? t.pass() : t.fail() 
+  new TextBuddy('One').uniqueWordCount() === 1 ? t.pass() : t.fail() 
+  new TextBuddy('One one').uniqueWordCount() === 1 ? t.pass() : t.fail() 
+  new TextBuddy('One Two Thee Four Five').uniqueWordCount() === 5 ? t.pass() : t.fail() 
+  new TextBuddy('One one two two three three').uniqueWordCount() === 3 ? t.pass() : t.fail() 
+})
 
 

@@ -12,7 +12,8 @@ class TextBuddy {
             "Word count" : this.wordCount(),
             "Character count": this.characterCount(),
             "Character count excluding spaces": this.characterCountExcludingSpaces(),
-            "Word frequency": this.wordFrequency()
+            "Word frequency": this.wordFrequency(),
+            "Unique word count": this.uniqueWordCount()
         }
     }
 
@@ -61,6 +62,9 @@ class TextBuddy {
      * @returns {Object} A json object with each uniqe word and frequency of the word.
      */
     wordFrequency () {
+        if(this.#text.trim().length === 0)
+        return {}
+
         const spaces = /\s+/g // Regex
         const words = this.#text.trim().toLowerCase().replace(spaces, ' ').split(' ')
 
@@ -74,6 +78,16 @@ class TextBuddy {
             }
         })
         return wordFrequency
+    }
+
+      /**
+     * Returns number representing the number of unique words.
+     *
+     * @returns {number} The number of unique words that occur in the text.
+     */
+      uniqueWordCount() {
+        const wordFrequency = this.wordFrequency(this.#text)
+        return Object.keys(wordFrequency).length
     }
 }
 
