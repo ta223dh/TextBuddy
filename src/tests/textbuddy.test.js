@@ -26,18 +26,18 @@ test('Invalid values', t => {
 
 /**
  * Test 2
- * getWordCount()
+ * wordCount()
  */
 test('Word count', t => {
-    new TextBuddy('').getWordCount() === 0 ? t.pass() : t.fail() 
-    new TextBuddy('OneWord').getWordCount() === 1 ? t.pass() : t.fail() 
-    new TextBuddy('Two Words').getWordCount() === 2 ? t.pass() : t.fail() 
-    new TextBuddy('       Three Different Words').getWordCount() === 3 ? t.pass() : t.fail() 
-    new TextBuddy('!Two        Words_').getWordCount() === 2 ? t.pass() : t.fail() 
-    new TextBuddy('OneWord          ').getWordCount() === 1 ? t.pass() : t.fail() 
-    new TextBuddy('Five Words . , *').getWordCount() === 5 ? t.pass() : t.fail() 
-    new TextBuddy('Six Words six words SIX WORDS').getWordCount() === 6 ? t.pass() : t.fail() 
-    new TextBuddy('SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN').getWordCount() === 7 ? t.pass() : t.fail() 
+    new TextBuddy('').wordCount() === 0 ? t.pass() : t.fail() 
+    new TextBuddy('OneWord').wordCount() === 1 ? t.pass() : t.fail() 
+    new TextBuddy('Two Words').wordCount() === 2 ? t.pass() : t.fail() 
+    new TextBuddy('       Three Different Words').wordCount() === 3 ? t.pass() : t.fail() 
+    new TextBuddy('!Two        Words_').wordCount() === 2 ? t.pass() : t.fail() 
+    new TextBuddy('OneWord          ').wordCount() === 1 ? t.pass() : t.fail() 
+    new TextBuddy('Five Words . , *').wordCount() === 5 ? t.pass() : t.fail() 
+    new TextBuddy('Six Words six words SIX WORDS').wordCount() === 6 ? t.pass() : t.fail() 
+    new TextBuddy('SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN').wordCount() === 7 ? t.pass() : t.fail() 
     //new TextBuddy('\n\n').getWordCount() === 0 ? t.pass() : t.fail() 
     //new TextBuddy('     ').getWordCount() === 0 ? t.pass() : t.fail() 
   })
@@ -47,21 +47,38 @@ test('Word count', t => {
  * getCharacterCount()
  */
 test('Character count', t => {
-  new TextBuddy('').getCharacterCount() === 0 ? t.pass() : t.fail() 
-  new TextBuddy(' ').getCharacterCount() === 1 ? t.pass() : t.fail() 
-  new TextBuddy('!').getCharacterCount() === 1 ? t.pass() : t.fail() 
-  new TextBuddy('Four').getCharacterCount() === 4 ? t.pass() : t.fail() 
-  new TextBuddy('Five ').getCharacterCount() === 5 ? t.pass() : t.fail() 
+  new TextBuddy('').characterCount() === 0 ? t.pass() : t.fail() 
+  new TextBuddy(' ').characterCount() === 1 ? t.pass() : t.fail() 
+  new TextBuddy('!').characterCount() === 1 ? t.pass() : t.fail() 
+  new TextBuddy('Four').characterCount() === 4 ? t.pass() : t.fail() 
+  new TextBuddy('Five ').characterCount() === 5 ? t.pass() : t.fail() 
 })
- 
+
 /**
  * Test 3
- * getCharacterCountExcludingSpaces()
+ * characterCountExcludingSpaces()
  */
 test('Character count exluding spaces', t => {
-  new TextBuddy('').getCharacterCountExcludingSpaces() === 0 ? t.pass() : t.fail() 
-  new TextBuddy(' ').getCharacterCountExcludingSpaces() === 0 ? t.pass() : t.fail() 
-  new TextBuddy('!').getCharacterCountExcludingSpaces() === 1 ? t.pass() : t.fail() 
-  new TextBuddy('Four').getCharacterCountExcludingSpaces() === 4 ? t.pass() : t.fail() 
-  new TextBuddy('Five ').getCharacterCountExcludingSpaces() === 4 ? t.pass() : t.fail() 
+  new TextBuddy('').characterCountExcludingSpaces() === 0 ? t.pass() : t.fail() 
+  new TextBuddy(' ').characterCountExcludingSpaces() === 0 ? t.pass() : t.fail() 
+  new TextBuddy('!').characterCountExcludingSpaces() === 1 ? t.pass() : t.fail() 
+  new TextBuddy('Four').characterCountExcludingSpaces() === 4 ? t.pass() : t.fail() 
+  new TextBuddy('Five ').characterCountExcludingSpaces() === 4 ? t.pass() : t.fail() 
 })
+
+/**
+ * Test 4
+ * wordFrequency()
+ */
+test('Word requency', t => {
+  compare(new TextBuddy('One').wordFrequency(), {one: 1}) ? t.pass() : t.fail() 
+  compare(new TextBuddy('Two two').wordFrequency(), {two: 2}) ? t.pass() : t.fail() 
+  compare(new TextBuddy('One two two').wordFrequency(), {one: 1, two: 2}) ? t.pass() : t.fail() 
+
+  function compare(objectOne, objectTwo) {
+    return Object.entries(objectOne).toString() === Object.entries(objectTwo).toString()
+  }
+})
+
+
+
