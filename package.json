@@ -1,29 +1,26 @@
 {
   "name": "textbuddy",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "description": "TextBuddy is a JavaScript module for text analysis. Engineered to be your friendly digital sidekick, TextBuddy can assist you with a wide range of tasks - from simple word count and keyword extraction to advanced analysis with AI-integration.",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "lint": "npx eslint ./src || exit 0",
+    "lint:fix": "npx eslint ./src --fix || exit 0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ta223dh/TextBuddy.git"
   },
   "keywords": [
-    "Text",
-    "analyzer",
-    "Text",
-    "analyser",
-    "Text",
-    "buddy"
   ],
   "author": "ta223dh",
   "license": "MIT",
   "devDependencies": {
     "vite": "^4.4.9",
-    "ava": "^5.3.1"
+    "ava": "^5.3.1",
+    "@lnu/eslint-config": "^1.1.10"
   },
   "bugs": {
     "url": "https://github.com/ta223dh/TextBuddy/issues"
