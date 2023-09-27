@@ -11,6 +11,7 @@ class TextBuddy {
   #longestWord
   #averageWordLength
   #esimatedReadingTimeInMinutes
+  #openAiApiKey
 
   /**
    *
@@ -200,6 +201,52 @@ class TextBuddy {
       return wordFrequencyOfWord
     }
     return 0
+  }
+
+  /**
+   *
+   * @param openAiApiKey
+   */
+  setOpenAiApiKey (openAiApiKey) {
+    this.#openAiApiKey = openAiApiKey
+  }
+
+  /**
+   *
+   */
+  async aiGetLanguage () {
+    if (!this.#openAiApiKey) {
+      throw new Error('Must set API key to use Ai features.')
+    }
+    const url = 'https://api.openai.com/v1/chat/completions'
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${this.#openAiApiKey}`
+      },
+      body: JSON.stringify({
+        model: 'gpt-3.5-turbo',
+        messages: [{
+          role: 'system',
+          content: 'You are TextBuddy, an Ai-Text-Analyzer. Provide your best analyzis of the text according to instructions.'
+        }, {
+          role: 'user',
+          content: `Analyze the text below and return the language of the text. Your response should only consist of two letter to describe the language according to standard ISO 639-1, in lower case letters. You should not include any other characters or words in your response. your response should be strictly limited to two characters. If you are unable to decide the language, repond with 'Unknown language.'. Text to analyze: ${this.#text}`
+        }]
+      })
+    }
+    try {
+      const response = await fetch(url, options)
+      if (!response.ok) {
+        throw new Error('Response error')
+      }
+      const data = await response.json()
+      const answer = data.choices[0].message.content
+      return answer
+    } catch (error) {
+      throw new Error('Connection error')
+    }
   }
 }
 

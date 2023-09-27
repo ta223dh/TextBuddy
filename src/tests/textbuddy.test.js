@@ -151,3 +151,40 @@ test('Word frequency of word', t => {
   new TextBuddy('Three two two').wordFrequencyOfWord('Three') === 1 ? t.pass() : t.fail()
   new TextBuddy('Three three two').wordFrequencyOfWord('Three') === 2 ? t.pass() : t.fail()
 })
+
+/**
+ * Test 11
+ * aiGetLanguage()
+ */
+test('aiGetLanguage', async t => {
+  const OPENAI_API_KEY = null
+  const sentences = [
+    'The sun rises in the east and sets in the west.',
+    'Le soleil se lève à lest et se couche à louest.',
+    'Die Sonne geht im Osten auf und im Westen unter.',
+    'El sol sale por el este y se pone por el oeste.',
+    'Il sole sorge a est e tramonta a ovest.',
+    'Solen stiger i öst och går ner i väst.',
+    'Zon gaat op in het oosten en gaat onder in het westen.',
+    'Solen står op i øst og går ned i vest.',
+    'Słońce wschodzi na wschodzie i zachodzi na zachodzie.',
+    'O sol nasce no leste e se põe no oeste.'
+  ]
+  const answers = ['en', 'fr', 'de', 'es', 'it', 'sv', 'nl', 'da', 'pl', 'pt']
+
+  for (let i = 0; i < sentences.length; i++) {
+    try {
+      const buddy = new TextBuddy(sentences[i])
+      buddy.setOpenAiApiKey(OPENAI_API_KEY)
+      const answer = await buddy.aiGetLanguage()
+      const trimmedAndLowerCaseAnswer = answer.trim().toLowerCase()
+      if (trimmedAndLowerCaseAnswer === answers[i]) {
+        t.pass()
+      } else {
+        t.fail(answer + ' expected: ' + answers[i])
+      }
+    } catch (error) {
+      t.fail(error.message)
+    }
+  }
+})
