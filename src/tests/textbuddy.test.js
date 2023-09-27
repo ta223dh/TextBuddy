@@ -137,3 +137,17 @@ test('Estimated reading time in minutes', t => {
   new TextBuddy('One').esimatedReadingTimeInMinutes() === 0.005 ? t.pass() : t.fail()
   new TextBuddy('happened creditcard tyan huf henrietta thomas rational dopod springhill woven foundational hometwat muzzle esse breakfast skilling updates polymerase newbie arrangement ihc xvii jar zithromax aix archivists crust powershot vivo dunwoody proposals annualized centrino touched rabble foals plank atty fielding violator gon thunderstorm unbundled rescues decipher fad concluded uploader carat gimp oyster flowering paid perle gof derrick faxpress techspot harmonics motogp gti urbanization thornton amphitheater heterosexual infect sounds escudo emptiness steelhead moda nonspecific malay turtleneck labelle followed smyth sight delicately foresee answer vijay faulkner pentium babysitter naughty handicapper sbs graf pissed rangers cancers consonants drama gothenburg imprinted commercially disgrace smashing conjure castles westgate compressor sions golan subscription transformers collaboration naruto generics arise compassion eager ivillage straight discounted grasses circumstances haney atherton montgomery cardboard classpath freezing degenerative proverb swedish webster obedience superior jewellery albanians trendnet motrin antcn fu fraught driver subways dragoon condemned tendered important nick irt touchstone spongebob draper clumps occupy moblog msb scrubbed roh scaffold quickly blakely flavour passports packer bermuda hypocritical gorillas oboe nrc inspectorate html happiest nakamura boardhost coleman they difficult pedersen cooper iota talking clan objections intercity canada hardcore sobbing deactivate me brow stamina quod competitor bmj pesca labtec mattress hookups landowners petitioner renee flop abrahams frighten').esimatedReadingTimeInMinutes() === 1 ? t.pass() : t.fail()
 })
+
+/**
+ * Test 10
+ * wordFrequencyOfWord()
+ */
+test('Word frequency of word', t => {
+  new TextBuddy('').wordFrequencyOfWord('One') === 0 ? t.pass() : t.fail()
+  new TextBuddy(' ').wordFrequencyOfWord('One') === 0 ? t.pass() : t.fail()
+  new TextBuddy('One').wordFrequencyOfWord('One') === 1 ? t.pass() : t.fail()
+  new TextBuddy('Two two').wordFrequencyOfWord('One') === 0 ? t.pass() : t.fail()
+  new TextBuddy('One two two').wordFrequencyOfWord('Two') === 2 ? t.pass() : t.fail()
+  new TextBuddy('Three two two').wordFrequencyOfWord('Three') === 1 ? t.pass() : t.fail()
+  new TextBuddy('Three three two').wordFrequencyOfWord('Three') === 2 ? t.pass() : t.fail()
+})

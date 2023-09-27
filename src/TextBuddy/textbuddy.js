@@ -156,6 +156,22 @@ class TextBuddy {
     /* Assumed 200 words per minute average speed */
     return this.wordCount() / 200
   }
+
+  /**
+    * Returns the frequency of a word.
+    *
+    * @param {String} word - The word to count.
+    * @returns {Number} The frequency on the word.
+    */
+  wordFrequencyOfWord (word) {
+    const wordFrequency = this.wordFrequency(this.#text)
+    const wordFrequencyOfWord = wordFrequency[word.toLowerCase()]
+
+    if (wordFrequencyOfWord !== null && typeof wordFrequencyOfWord === 'number') {
+      return wordFrequencyOfWord
+    }
+    return 0
+  }
 }
 
 export default TextBuddy
