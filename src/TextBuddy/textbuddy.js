@@ -10,13 +10,13 @@ class TextBuddy {
   #uniqueWordCount
   #longestWord
   #averageWordLength
-  #esimatedReadingTimeInMinutes
+  #estimatedReadingTimeInMinutes
   #openAiApiKey
 
   /**
    * The class constructor.
    *
-   * @param {string} text - The text to analyse.
+   * @param {string} text - The text to analyze.
    */
   constructor (text) {
     this.#text = text
@@ -24,9 +24,18 @@ class TextBuddy {
   }
 
   /**
-   * Returns an object containing all basic analysis available in the module.
+   * Get the text of this instance of TextBuddy.
    *
-   * @returns {object} - One object with all the basic text analysis.
+   * @returns {string} - The text.
+   */
+  getText () {
+    return this.#text
+  }
+
+  /**
+   * Returns an object containing all basic analyzis available in the module.
+   *
+   * @returns {object} - One object with all the basic text analyzis.
    */
   fullAnalyzis () {
     return {
@@ -37,17 +46,8 @@ class TextBuddy {
       'Unique word count': this.uniqueWordCount(),
       'Longest word': this.longestWord(),
       'Average word length': this.averageWordLength(),
-      'Estimated reading time in minutes': this.esimatedReadingTimeInMinutes()
+      'Estimated reading time in minutes': this.estimatedReadingTimeInMinutes()
     }
-  }
-
-  /**
-   * Get the text of this instance of TextBuddy.
-   *
-   * @returns {string} - The text.
-   */
-  getText () {
-    return this.#text
   }
 
   /**
@@ -92,9 +92,9 @@ class TextBuddy {
   }
 
   /**
-   * Returns a json object with each uniqe word and frequency of the word sorted with the most frequent word first.
+   * Returns a JSON object with each uniqe word and frequency of the word sorted with the most frequent word first.
    *
-   * @returns {object} A json object with each uniqe word and frequency of the word sorted by desc freq.
+   * @returns {object} A JSON object with each uniqe word and frequency of the word sorted by desc freq.
    */
   wordFrequency () {
     if (!this.#wordFrequency) {
@@ -184,12 +184,12 @@ class TextBuddy {
    *
    * @returns {number} The estimated reading time in minutes.
    */
-  esimatedReadingTimeInMinutes () {
-    if (!this.#esimatedReadingTimeInMinutes) {
-    /* Assumed 200 words per minute average speed */
-      this.#esimatedReadingTimeInMinutes = this.wordCount() / 200
+  estimatedReadingTimeInMinutes () {
+    if (!this.#estimatedReadingTimeInMinutes) {
+      /* Assumed 200 words per minute average speed */
+      this.#estimatedReadingTimeInMinutes = this.wordCount() / 200
     }
-    return this.#esimatedReadingTimeInMinutes
+    return this.#estimatedReadingTimeInMinutes
   }
 
   /**
@@ -218,9 +218,9 @@ class TextBuddy {
   }
 
   /**
-   * Analyse and return the language of the text in the ISO 639-1 format.
+   * Analyze and return the language of the text in the ISO 639-1 format.
    *
-   * @returns {string} The language in IOS 639-1 format (for example 'en' for English).
+   * @returns {string} The language in ISO 639-1 format (for example 'en' for English).
    * @throws {Error} - Response error
    * @throws {Error} - Connection error
    */

@@ -1,12 +1,12 @@
 ## ⚠️ Warning
-IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE IN PRODUCTION ENVIRONMENT.
+IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE IN A PRODUCTION ENVIRONMENT.
 
 ## TextBuddy
-**TextBuddy** is a JavaScript module for text analysis. TextBuddy can assist you with a wide range of tasks - from simple character and word count to chatbot integration with OpenAi's API.  
+**TextBuddy** is a JavaScript module for text analyzis. TextBuddy can assist you with a wide range of tasks - from simple character and word count to chatbot integration with OpenAi's API.  
 
 It was created and is maintained by a student at Linnaeus University in Sweden as part of an assignment in the course "Introduction to software quality".
 
-Once the module reaches version 1.0.0, it will be suitable be used by any project that needs a simple, dependency-free and modern module for analysing text.
+Once the module reaches version 1.0.0, it will be suitable for use by any project that needs a simple, dependency-free, and modern module for analyzing text.
 
 **Table of contents**
 - [Example usage](#example-usage)
@@ -27,7 +27,7 @@ try {
     const wordCount = text.wordCount() // 11
 
     text.setOpenAiApiKey('your-api-key')
-    const language = text.aiGetLanguage // en  
+    const language = text.aiGetLanguage() // en  
 
 } catch (error) {
       console.log(error.message)
@@ -36,7 +36,7 @@ try {
 
 ## Example project implementation
 
-The live demo is a front end web component that uses the TextBuddy module to analyse a text directly in the browser. TextBuddy by itself does not have any frontend, and can be used in any type of project.
+The live demo is a front end web component that uses the TextBuddy module to analyze a text directly in the browser. TextBuddy by itself does not have any frontend, and can be used in any type of project.
 
 **Live demo**: https://textbuddy-demo.aihonen.se  
 **Repository for the live demo**: https://github.com/ta223dh/TextBuddy-Demo  
@@ -53,21 +53,21 @@ _Note: The live demo has not yet incorporated the modules Ai-features._
 - `code .` to open the project in your code editor
 - Unit tests: `npm run test`
 - Check lint issues: `npm run lint`
-- Automaticallt fix lint issues (if possible): `npm run lint:fix`
+- Automatically fix lint issues (if possible): `npm run lint:fix`
 
 ## Dependencies
 **Basic features**:
-- TextBuddy is created from the ground up without any dependence on external libraries. The code is all written in modern javascript.
+- TextBuddy is created from the ground up without any dependency on external libraries. The code is all written in modern javascript.
 
 **Chatbot integration**:
-- Provide your own API key, and TextBuddy will be able to utilize OpenAi's API for chat completion. This will require a network call to OpenAi's servers. For costs, limitations and privacy policy, refer to your OpenAi licence agreement.
+- Provide your own API key, and TextBuddy will be able to utilize OpenAi's API for chat completion. This will require a network call to OpenAi's servers. For costs, limitations, and privacy policy, refer to your OpenAI license agreement.
 
 https://platform.openai.com/account/api-keys
 
 ## Features and documentation
 **Basic**
-- [fullAnalyzis()](module_documentation.md#fullAnalyzis)
 - [getText()](module_documentation.md#getText)
+- [fullAnalyzis()](module_documentation.md#fullAnalyzis)
 - [wordCount()](module_documentation.md#wordCount)
 - [characterCount()](module_documentation.md#characterCount)
 - [characterCountExcludingSpaces()](module_documentation.md#characterCountExcludingSpaces)
@@ -75,7 +75,7 @@ https://platform.openai.com/account/api-keys
 - [uniqueWordCount()](module_documentation.md#uniqueWordCount)
 - [longestWord()](module_documentation.md#longestWord)
 - [averageWordLength()](module_documentation.md#averageWordLength)
-- [esimatedReadingTimeInMinutes()](module_documentation.md#esimatedReadingTimeInMinutes)
+- [estimatedReadingTimeInMinutes()](module_documentation.md#estimatedReadingTimeInMinutes)
 - [wordFrequencyOfWord(word)](module_documentation.md#wordfrequencyofwordword)
 
 **Ai**
@@ -83,8 +83,8 @@ https://platform.openai.com/account/api-keys
 - [aiGetLanguage()](module_documentation.md#aiGetLanguage)
 
 ## Known issues
-- The live demo needs to be updated to use the Ai-features.
-- The word counter should not count a single special character as a word. See issue: 
+- The live demo needs to be updated to use the Ai-features. INSERT ISSUE
+- The word counter should not count a single special character as a word. INSERT ISSUE
 
 ## Version history
 See [version history](https://github.com/ta223dh/TextBuddy/releases/)
@@ -112,7 +112,7 @@ For code contributions, the following requirements must be fullfilled:
 - Code is using modern javascript syntax (ECMAScript 6 and later)
 - No dependencies on third party modules
 - Unit tests are added for the new feature
-- Unit tests (new and old) runs with 0 fails
-- Lint runs with 0 warnings
+- Unit tests (new and old) run with 0 failures
+- Linting runs with 0 warnings
 
 A code review will then be conducted by the repository owner before merging.

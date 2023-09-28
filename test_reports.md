@@ -8,7 +8,36 @@ Table of contents
 ## Version 0.1.0, 2023-09-28
 **Summary:** All unit tests passed without errors ✅  
 
-### wordCount ()
+**Test** | Result
+---|---
+getText() | ✅
+fullAnalyzis()
+wordCount()
+characterCount()
+characterCountExcludingSpaces()
+wordFrequency()
+uniqueWordCount()
+longestWord()
+averageWordLength()
+estimatedReadingTimeInMinutes()
+wordFrequencyOfWord(word)
+aiGetLanguage()
+
+### getText()
+**Input** | Expected output | Actual output | Result
+---|---|---|---
+'' | '' | '' | ✅
+' ' | ' ' | ' ' | ✅
+'Hello' | 'Hello' | 'Hello' | ✅
+'Hello      world' | 'Hello      world' | 'Hello      world' | ✅
+
+
+### fullAnalyzis()
+**Input** | Expected output | Actual output | Result
+---|---|---|---
+'one two three' | {'Word count': 3, 'Character count': 13, 'Character count excluding spaces': 11, 'Word frequency': { one: 1, two: 1, three: 1 }, 'Unique word count': 3, 'Longest word': 'three', 'Average word length': 3.6666666666666665, 'Estimated reading time in minutes': 0.015} | {'Word count': 3, 'Character count': 13, 'Character count excluding spaces': 11, 'Word frequency': { one: 1, two: 1, three: 1 }, 'Unique word count': 3, 'Longest word': 'three', 'Average word length': 3.6666666666666665, 'Estimated reading time in minutes': 0.015} | ✅
+
+### wordCount()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '' | 0 | 0 | ✅
@@ -21,7 +50,7 @@ Table of contents
 'Six Words six words SIX WORDS' | 6 | 6 | ✅
 'SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN' | 7 | 7 | ✅
 
-### characterCount ()
+### characterCount()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '' | 0 | 0 | ✅
@@ -30,7 +59,7 @@ Table of contents
 'Four' | 4 | 4 | ✅
 'Five ' | 5 | 5 | ✅
 
-### characterCountExcludingSpaces ()
+### characterCountExcludingSpaces()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '' | 0 | 0 | ✅
@@ -39,7 +68,7 @@ Table of contents
 'Four' | 4 | 4 | ✅
 'Five ' | 4 | 4 | ✅
 
-### wordFrequency ()
+### wordFrequency()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '' | {} | {} | ✅
@@ -48,7 +77,7 @@ Table of contents
 'Two two' | { two: 2 } | { two: 2 } | ✅
 'One two two ' | { two: 2, one: 1 } | { two: 2, one: 1 } | ✅
 
-### uniqueWordCount ()
+### uniqueWordCount()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '' | 0 | 0 | ✅
@@ -57,7 +86,7 @@ Table of contents
 'One two three four five' | 5 | 5 | ✅
 'One one two two three three ' | 3 | 3 | ✅
 
-### longestWord ()
+### longestWord()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '' | '' | '' | ✅
@@ -66,7 +95,7 @@ Table of contents
 'One two three four five' | three | three | ✅
 'This is a long word: helicopter ' | helicopter | helicopter | ✅
 
-### averageWordLength ()
+### averageWordLength()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '' | 0 | 0 | ✅
@@ -74,7 +103,7 @@ Table of contents
 'Four four four four' | 4 | 4 | ✅
 'The average is' | 4 | 4 | ✅
 
-### esimatedReadingTimeInMinutes ()
+### estimatedReadingTimeInMinutes()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '' | 0 | 0 | ✅
@@ -82,7 +111,7 @@ Table of contents
 'One' | 0.005 | 0.005 | ✅
 'happened creditcard tyan huf henrietta thomas rational dopod springhill woven foundational hometwat muzzle esse breakfast skilling updates polymerase newbie arrangement ihc xvii jar zithromax aix archivists crust powershot vivo dunwoody proposals annualized centrino touched rabble foals plank atty fielding violator gon thunderstorm unbundled rescues decipher fad concluded uploader carat gimp oyster flowering paid perle gof derrick faxpress techspot harmonics motogp gti urbanization thornton amphitheater heterosexual infect sounds escudo emptiness steelhead moda nonspecific malay turtleneck labelle followed smyth sight delicately foresee answer vijay faulkner pentium babysitter naughty handicapper sbs graf pissed rangers cancers consonants drama gothenburg imprinted commercially disgrace smashing conjure castles westgate compressor sions golan subscription transformers collaboration naruto generics arise compassion eager ivillage straight discounted grasses circumstances haney atherton montgomery cardboard classpath freezing degenerative proverb swedish webster obedience superior jewellery albanians trendnet motrin antcn fu fraught driver subways dragoon condemned tendered important nick irt touchstone spongebob draper clumps occupy moblog msb scrubbed roh scaffold quickly blakely flavour passports packer bermuda hypocritical gorillas oboe nrc inspectorate html happiest nakamura boardhost coleman they difficult pedersen cooper iota talking clan objections intercity canada hardcore sobbing deactivate me brow stamina quod competitor bmj pesca labtec mattress hookups landowners petitioner renee flop abrahams frighten' | 1 | 1 | ✅
 
-### wordFrequencyOfWord ()
+### wordFrequencyOfWord(word)
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 '', 'One' | 0 | 0 | ✅
@@ -93,7 +122,7 @@ Table of contents
 'Three two two', 'Three' | 1 | 1 | ✅
 'Three three two', 'Three' | 2 | 2 | ✅
 
-### aiGetLanguage ()
+### aiGetLanguage()
 **Input** | Expected output | Actual output | Result
 ---|---|---|---
 'The sun rises in the east and sets in the west.' | 'en' | 'en' | ✅

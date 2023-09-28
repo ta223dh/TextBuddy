@@ -1,10 +1,10 @@
 [Go back to TextBuddy README](README.md)
 
-# TexBuddy module documentation
+# TextBuddy module documentation
 
 **Table of contents**
-- [fullAnalyzis()](#fullAnalyzis)
 - [getText()](#getText)
+- [fullAnalyzis()](#fullAnalyzis)
 - [wordCount()](#wordCount)
 - [characterCount()](#characterCount)
 - [characterCountExcludingSpaces()](#characterCountExcludingSpaces)
@@ -12,10 +12,30 @@
 - [uniqueWordCount()](#uniqueWordCount)
 - [longestWord()](#longestWord)
 - [averageWordLength()](#averageWordLength)
-- [esimatedReadingTimeInMinutes()](#esimatedReadingTimeInMinutes)
+- [estimatedReadingTimeInMinutes()](#estimatedReadingTimeInMinutes)
 - [wordFrequencyOfWord()](#wordfrequencyofwordword)
 - [setOpenAiApiKey(key)](#setopenaiapikeykey)
 - [aiGetLanguage()](#aiGetLanguage)
+
+## getText() 
+JSDoc
+```javascript
+ /**
+   * Get the text of this instance of TextBuddy.
+   *
+   * @returns {string} - The text.
+   */
+```
+Example
+```javascript
+const text = new TextBuddy('Two words.')
+console.log(text.getText())
+```
+
+Output
+```javascript
+Two words.
+```
 
 ## fullAnalyzis() 
 JSDoc
@@ -33,38 +53,18 @@ const fullAnalysis = text.fullAnalyzis()
 console.log(fullAnalysis)
 ```
 
-OutPut
+Output
 ```javascript
 {
       'Word count': 3,
       'Character count': 13,
       'Character count excluding spaces': 11,
-      'Word frequency': { one: 1, two: 1, three: 1 }
+      'Word frequency': { one: 1, two: 1, three: 1 },
       'Unique word count': 3,
       'Longest word':'three',
       'Average word length': 3.6666666666666665,
       'Estimated reading time in minutes': 0.015
     }
-```
-
-## getText() 
-JSDoc
-```javascript
- /**
-   * Get the text of this instance of TextBuddy.
-   *
-   * @returns {string} - The text.
-   */
-```
-Example
-```javascript
-const text = new TextBuddy('Two words.')
-console.log(text.getText())
-```
-
-OutPut
-```javascript
-Two words.
 ```
 
 ## wordCount() 
@@ -83,7 +83,7 @@ const wordCount = text.wordCount()
 console.log(wordCount)
 ```
 
-OutPut
+Output
 ```javascript
 2
 ```
@@ -104,7 +104,7 @@ const count = text.characterCount()
 console.log(count)
 ```
 
-OutPut
+Output
 ```javascript
 4
 ```
@@ -125,7 +125,7 @@ const count = text.characterCountExcludingSpaces()
 console.log(count)
 ```
 
-OutPut
+Output
 ```javascript
 8
 ```
@@ -134,9 +134,9 @@ OutPut
 JSDoc
 ```javascript
  /**
-   * Returns a json object with each uniqe word and frequency of the word sorted with the most frequent word first.
+   * Returns a JSON object with each uniqe word and frequency of the word sorted with the most frequent word first.
    *
-   * @returns {object} A json object with each uniqe word and frequency of the word sorted by desc freq.
+   * @returns {object} A JSON object with each uniqe word and frequency of the word sorted by desc freq.
    */
   ```
 Example
@@ -146,7 +146,7 @@ const freq = text.wordFrequency()
 console.log(freq)
 ```
 
-OutPut
+Output
 ```javascript
 {
     one: 2,
@@ -170,7 +170,7 @@ const count = text.uniqueWordCount()
 console.log(count)
 ```
 
-OutPut
+Output
 ```javascript
 2
 ```
@@ -190,7 +190,7 @@ const word = text.longestWord()
 console.log(word)
 ```
 
-OutPut
+Output
 ```javascript
 loooooong
 ```
@@ -210,11 +210,11 @@ const length = text.averageWordLength()
 console.log(length)
 ```
 
-OutPut
+Output
 ```javascript
 4
 ```
-## esimatedReadingTimeInMinutes()
+## estimatedReadingTimeInMinutes()
 JSDoc
 ```javascript
  /**
@@ -226,11 +226,11 @@ JSDoc
 Example
 ```javascript
 const text = new TextBuddy('One')
-const minutes = text.esimatedReadingTimeInMinutes()
+const minutes = text.estimatedReadingTimeInMinutes()
 console.log(minutes)
 ```
 
-OutPut
+Output
 ```javascript
 0.005
 ```
@@ -251,7 +251,7 @@ const freq = text.wordFrequencyOfWord('One')
 console.log(freq)
 ```
 
-OutPut
+Output
 ```javascript
 1
 ```
@@ -268,19 +268,15 @@ Example
 ```javascript
 const text = new TextBuddy('One two three')
 text.setOpenAiApiKey('my-api-key')
-```
+```  
 
-OutPut
-```javascript
-None
-```
 ## aiGetLanguage()
 JSDoc
 ```javascript
   /**
    * Analyse and return the language of the text in the ISO 639-1 format.
    *
-   * @returns {string} The language in IOS 639-1 format (for example 'en' for English).
+   * @returns {string} The language in ISO 639-1 format (for example 'en' for English).
    * @throws {Error} - Response error
    * @throws {Error} - Connection error
    */
@@ -293,7 +289,7 @@ const language = text.aiGetLanguage()
 console.log(language)
 ```
 
-OutPut
+Output
 ```javascript
 en
 ```
