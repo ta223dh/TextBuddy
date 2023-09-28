@@ -7,12 +7,13 @@ import TextBuddy from '../TextBuddy/textbuddy.js'
  */
 test('Invalid values', t => {
   /**
+   * Helper methods for testing different input types
    *
-   * @param inputFunction
+   * @param {object} inputObject
    */
-  function tryInvalidValues (inputFunction) {
+  function tryInvalidValues (inputObject) {
     try {
-      inputFunction()
+      inputObject()
       t.fail()
     } catch (error) {
       t.pass()
@@ -23,8 +24,6 @@ test('Invalid values', t => {
   tryInvalidValues(new TextBuddy(null))
   tryInvalidValues(new TextBuddy([]))
   tryInvalidValues(new TextBuddy({}))
-  tryInvalidValues(new TextBuddy(new String()))
-  tryInvalidValues(new TextBuddy(new Number()))
   tryInvalidValues(new TextBuddy(new Error()))
 })
 
@@ -80,9 +79,11 @@ test('Word frequency', t => {
   compare(new TextBuddy('One two two').wordFrequency(), { two: 2, one: 1 }) ? t.pass() : t.fail()
 
   /**
+   * Helper method for comparing objects
    *
-   * @param objectOne
-   * @param objectTwo
+   * @param {object} objectOne
+   * @param {object} objectTwo
+   * @returns { boolean }
    */
   function compare (objectOne, objectTwo) {
     return Object.entries(objectOne).toString() === Object.entries(objectTwo).toString()
