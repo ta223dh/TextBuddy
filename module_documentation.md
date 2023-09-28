@@ -1,3 +1,5 @@
+[Go back to TextBuddy README](README.md)
+
 # TexBuddy module documentation
 
 **Table of contents**
