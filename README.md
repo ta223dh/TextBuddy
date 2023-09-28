@@ -21,14 +21,13 @@ Once the module reaches version 1.0.0, it will be suitable for use by any projec
 
 ## Example usage
 ```javascript
+const text = new TextBuddy('This is a text in English. It consists of eleven words.')
+const wordCount = text.wordCount() // 11
+
+text.setOpenAiApiKey('your-api-key')
+
 try {  
-
-    const text = new TextBuddy('This is a text in English. It consists of eleven words.')
-    const wordCount = text.wordCount() // 11
-
-    text.setOpenAiApiKey('your-api-key')
-    const language = text.aiGetLanguage() // en  
-
+    const language = await text.aiGetLanguage() // en  
 } catch (error) {
       console.log(error.message)
 }

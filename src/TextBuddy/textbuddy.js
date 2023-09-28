@@ -218,9 +218,9 @@ class TextBuddy {
   }
 
   /**
-   * Analyze and return the language of the text in the ISO 639-1 format.
+   * Analyze and a return the language of the text in the ISO 639-1 format.
    *
-   * @returns {string} The language in ISO 639-1 format (for example 'en' for English).
+   * @returns {Promise<string>} A promise that resolves to a string containing the  language in ISO 639-1 format (for example 'en' for English).
    * @throws {Error} - Response error
    * @throws {Error} - Connection error
    */
