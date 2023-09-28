@@ -31,6 +31,14 @@ aiGetLanguage() | ✅
 'Hello' | 'Hello' | 'Hello' | ✅
 'Hello      world' | 'Hello      world' | 'Hello      world' | ✅
 
+### getText()
+**Input** | Expected output | Actual output | Result
+---|---|---|---
+'' | '' | '' | ✅
+' ' | ' ' | ' ' | ✅
+'Hello' | 'Hello' | 'Hello' | ✅
+'Hello      world' | 'Hello      world' | 'Hello      world' | ✅
+
 
 ### fullAnalyzis()
 **Input** | Expected output | Actual output | Result

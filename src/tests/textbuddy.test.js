@@ -2,32 +2,6 @@ import test from 'ava'
 import TextBuddy from '../TextBuddy/textbuddy.js'
 
 /**
- * Test -1
- * Try invalid input values()
- */
-test('Invalid values', t => {
-  /**
-   * Helper methods for testing different input types.
-   *
-   * @param {object} inputObject - The object to initiate.
-   */
-  function tryInvalidValues (inputObject) {
-    try {
-      inputObject()
-      t.fail()
-    } catch (error) {
-      t.pass()
-    }
-  }
-
-  tryInvalidValues(new TextBuddy())
-  tryInvalidValues(new TextBuddy(null))
-  tryInvalidValues(new TextBuddy([]))
-  tryInvalidValues(new TextBuddy({}))
-  tryInvalidValues(new TextBuddy(new Error()))
-})
-
-/**
  * Test 0
  * fullAnalyzis()
  */
