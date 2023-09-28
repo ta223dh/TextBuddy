@@ -55,6 +55,11 @@ _Note: The live demo has not yet incorporated the modules Ai-features._
 - Check lint issues: `npm run lint`
 - Automatically fix lint issues (if possible): `npm run lint:fix`
 
+**Component code**: _src/TextBuddy/textbuddy.js_  
+
+**Unit tests**: _src/tests/textbuddy.test.js_
+- Set your API key in Test11 to test the Ai features.
+
 ## Dependencies
 **Basic features**:
 - TextBuddy is created from the ground up without any dependency on external libraries. The code is all written in modern javascript.

@@ -11,17 +11,17 @@ Table of contents
 **Test** | Result
 ---|---
 getText() | ✅
-fullAnalyzis()
-wordCount()
-characterCount()
-characterCountExcludingSpaces()
-wordFrequency()
-uniqueWordCount()
-longestWord()
-averageWordLength()
-estimatedReadingTimeInMinutes()
-wordFrequencyOfWord(word)
-aiGetLanguage()
+fullAnalyzis() | ✅
+wordCount() | ✅
+characterCount() | ✅
+characterCountExcludingSpaces() | ✅
+wordFrequency() | ✅
+uniqueWordCount() | ✅
+longestWord() | ✅
+averageWordLength() | ✅
+estimatedReadingTimeInMinutes() | ✅
+wordFrequencyOfWord(word) | ✅
+aiGetLanguage() | ✅
 
 ### getText()
 **Input** | Expected output | Actual output | Result
