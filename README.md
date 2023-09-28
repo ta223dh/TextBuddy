@@ -39,7 +39,9 @@ Using the module:
 - Installation: `npm i textbuddy`
 
 Developing the module:
-- `git clone` the project repo to your local folder, `cd TextBuddy` into the folder
+- `git clone` the project repo to your local folder
+- `cd TextBuddy` to navigage into the folder
+- `code .` to open the project in your code editor
 - Unit tests: `npm run test`
 - Check lint issues: `npm run lint`
 - Automaticallt fix lint issues (if possible): `npm run lint:fix`
@@ -74,10 +76,10 @@ Ai
 - The word counter should not count a single special character as a word. See issue: 
 
 ## Version history
-See VERSION HISTORY
+See [version history](version_history_md)
 
 ## Test reports
-See TEST REPORTS
+See [test reports](test_reports.md)
 
 ## Do you want to contribute to the project?
 Create an issue on github to report a bug or suggest a new feature. Make a Pull request to contribute new code. Check the issue list to see if there already is an existing issue before creating a new one.
