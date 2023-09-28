@@ -11,7 +11,7 @@ test('Invalid values', t => {
    *
    * @param {object} inputObject - The object to initiate.
    */
-  function tryInvalidValues(inputObject) {
+  function tryInvalidValues (inputObject) {
     try {
       inputObject()
       t.fail()
@@ -109,13 +109,13 @@ test('Word frequency', t => {
 })
 
 /**
-   * Helper method for comparing the content of objects.
-   *
-   * @param {object} objectOne - The first object.
-   * @param {object} objectTwo - The second object.
-   * @returns { boolean } - A boolean indicating if the objects contains the same keys and values.
-   */
-function compare(objectOne, objectTwo) {
+ * Helper method for comparing the content of objects.
+ *
+ * @param {object} objectOne - The first object.
+ * @param {object} objectTwo - The second object.
+ * @returns { boolean } - A boolean indicating if the objects contains the same keys and values.
+ */
+function compare (objectOne, objectTwo) {
   return Object.entries(objectOne).toString() === Object.entries(objectTwo).toString()
 }
 
