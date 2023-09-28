@@ -10,6 +10,8 @@ Table of contents
 - Added getText(), fullAnalyzis(), aiAnsweQuestion()
 - All unit tests passed without errors ✅  
 
+**Unit tests**: _src/tests/textbuddy.test.js_  
+
 **Test** | Result
 ---|---
 getText() | ✅
@@ -146,6 +148,8 @@ aiAnsweQuestion() | ✅
 
 ## Version 0.1.0, 2023-09-28
 **Summary:** All unit tests passed without errors ✅  
+
+**Unit tests**: _src/tests/textbuddy.test.js_  
 
 **Test** | Result
 ---|---

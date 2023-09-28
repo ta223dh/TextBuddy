@@ -1,3 +1,7 @@
+Laboration 2
+- [testrapport.md](testrapport.md)
+- [reflektion.md](testrapport.md)
+
 ## ⚠️ Warning
 IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE IN A PRODUCTION ENVIRONMENT.
 
@@ -99,7 +103,7 @@ https://platform.openai.com/account/api-keys
 See [version history](https://github.com/ta223dh/TextBuddy/releases/)
 
 ## Test reports
-See [test reports](test_reports.md)
+See [test reports](testrapport.md)
 
 ## Do you want to contribute to the project?
 Create an issue on github to report a bug or suggest a new feature. Make a Pull request to contribute new code. Check the issue list to see if there already is an existing issue before creating a new one.
