@@ -10,6 +10,7 @@ Once the module reaches version 1.0.0, it will be suitable be used by any projec
 
 **Table of contents**
 - [Example usage](#example-usage)
+- [Example project implementation](#example-project-implementation)
 - [Getting started](#getting-started-)
 - [Dependencies](#dependencies)
 - [Features and documentation](#features-and-documentation)
@@ -33,7 +34,7 @@ try {
 }
 ```
 
-**See the module in action in an example project**  
+## Example project implementation
 
 The live demo is a front end web component that uses the TextBuddy module to analyse a text directly in the browser. TextBuddy by itself does not have any frontend, and can be used in any type of project.
 
