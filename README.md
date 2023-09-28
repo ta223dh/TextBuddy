@@ -55,7 +55,7 @@ const language = text.aiGetLanguage // en
 - TextBuddy is created from the ground up without any dependence on external libraries. The code is all written in modern javascript.
 
 **Chatbot integration**:
-- Provide your own API key, and TextBuddy will be able to utilize OpenAi's API for chat completion. This will require a network call to OpenAi's servers. For costs, limitations and privacy policy, refer to your OpenAi account agreement.
+- Provide your own API key, and TextBuddy will be able to utilize OpenAi's API for chat completion. This will require a network call to OpenAi's servers. For costs, limitations and privacy policy, refer to your OpenAi licence agreement.
 
 https://platform.openai.com/account/api-keys
 
