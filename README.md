@@ -2,7 +2,7 @@
 THIS IS A STUDENT PROJECT AND WORK IN PROGRESS. IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE.
 
 ## TextBuddy
-TextBuddy is a JavaScript module for text analysis. TextBuddy can assist you with a wide range of tasks - from simple character count and word frequency to chatbot integration with OpenAi's API.  
+**TextBuddy** is a JavaScript module for text analysis. TextBuddy can assist you with a wide range of tasks - from simple character count and word frequency to chatbot integration with OpenAi's API.  
 
 - [Live demo](#features-and-documentation)
 - [Code example](#code-example)
@@ -16,8 +16,8 @@ TextBuddy is a JavaScript module for text analysis. TextBuddy can assist you wit
 
 ## Live demo
 
-Live demo: https://textbuddy-demo.aihonen.se  
-Repository for the live demo: https://github.com/ta223dh/TextBuddy-Demo 
+**Live demo**: https://textbuddy-demo.aihonen.se  
+**Repository for the live demo**: https://github.com/ta223dh/TextBuddy-Demo 
 
 _Note: Live demo has not yet incorporated the modules Ai-features._
 
@@ -34,10 +34,10 @@ const language = text.aiGetLanguage // en
 ```
 
 ## Getting started 
-Using the module:
+**Using the module**:
 - Installation: `npm i textbuddy`
 
-Developing the module:
+**Developing the module**:
 - `git clone` the project repo to your local folder
 - `cd TextBuddy` to navigage into the folder
 - `code .` to open the project in your code editor
@@ -55,7 +55,7 @@ Developing the module:
 https://platform.openai.com/account/api-keys
 
 ## Features and documentation
-Basic
+**Basic**
 - [wordCount () ](module_documentation.md#wordcount-)
 - characterCount ()
 - characterCountExcludingSpaces ()
@@ -66,7 +66,7 @@ Basic
 - esimatedReadingTimeInMinutes ()
 - wordFrequencyOfWord (word)
 
-Ai
+**Ai**
 - setOpenAiApiKey (key)
 - aiGetLanguage ()
 
