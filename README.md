@@ -85,7 +85,8 @@ https://platform.openai.com/account/api-keys
 **Ai**
 - [setOpenAiApiKey(key)](module_documentation.md#setopenaiapikeykey)
 - [aiGetLanguage()](module_documentation.md#aiGetLanguage)
-"   "
+- [aiAnswerQuestion(question)](module_documentation.md#aiAnswerQuestionquestion)
+
 ## Known issues
 **Live demo**
 - The live demo needs to be updated to use the Ai-features. [TBD-1](https://github.com/ta223dh/TextBuddy-Demo/issues/1)  

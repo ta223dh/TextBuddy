@@ -22,6 +22,8 @@ averageWordLength() | ✅
 estimatedReadingTimeInMinutes() | ✅
 wordFrequencyOfWord(word) | ✅
 aiGetLanguage() | ✅
+aiAnsweQuestion() | ✅
+
 
 ### getText()
 **Input** | Expected output | Actual output | Result
@@ -143,3 +145,8 @@ aiGetLanguage() | ✅
 'Solen står op i øst og går ned i vest.' | 'da' | 'da' | ✅
 'Słońce wschodzi na wschodzie i zachodzi na zachodzie.' | 'pl' | 'pl' | ✅
 'O sol nasce no leste e se põe no oeste.' | 'pt' | 'pt' | ✅
+
+### aiAnswerQuestion()
+**Input** | Expected output | Actual output | Result
+---|---|---|---
+'Kalmar is the capital of Sweden', 'What is the capital of Sweden?' | '(A string containing the word) Kalmar' | '(A string containing the word) Kalmar' | ✅

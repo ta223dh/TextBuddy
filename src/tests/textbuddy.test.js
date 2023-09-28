@@ -157,8 +157,9 @@ test('Word frequency of word', t => {
  * Test 11
  * aiGetLanguage()
  */
+const OPENAI_API_KEY = null
+
 test('aiGetLanguage', async t => {
-  const OPENAI_API_KEY = null
   const sentences = [
     'The sun rises in the east and sets in the west.',
     'Le soleil se lève à lest et se couche à louest.',
@@ -187,5 +188,24 @@ test('aiGetLanguage', async t => {
     } catch (error) {
       t.fail(error.message)
     }
+  }
+})
+
+/**
+ * Test 12
+ * aiAnswerQuestion(question)
+ */
+test('aiAnswerQuestion', async t => {
+  const buddy = new TextBuddy('Kalmar is the capital of Sweden.')
+  buddy.setOpenAiApiKey(OPENAI_API_KEY)
+  try {
+    const answer = await buddy.aiAnswerQuestion('What is the capital of Sweden?')
+    if (typeof answer === 'string' && answer.length > 0 && answer.toLowerCase().includes('kalmar')) {
+      t.pass()
+    } else {
+      t.fail('Actual answer: ' + answer + ' Expected answer: Kalmar')
+    }
+  } catch (error) {
+    t.fail(error.message)
   }
 })

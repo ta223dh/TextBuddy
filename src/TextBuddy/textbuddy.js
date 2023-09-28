@@ -225,6 +225,40 @@ class TextBuddy {
    * @throws {Error} - Connection error
    */
   async aiGetLanguage () {
+    const systemInstructions = 'You are TextBuddy, an Ai-Text-Analyzer. Provide your best analyzis of the text according to instructions.'
+    const userInstructions = `Analyze the text below and return the language of the text. Your response should only consist of two letter to describe the language according to standard ISO 639-1, in lower case letters. You should not include any other characters or words in your response. your response should be strictly limited to two characters. If you are unable to decide the language, repond with 'Unknown language.'. Text to analyze: ${this.#text}`
+    return await this.#postChatCompletion(systemInstructions, userInstructions)
+  }
+
+  /**
+   * Ask a question about the text and get an answer in string form.
+   *
+   * @param {string} question - The question.
+   * @returns {Promise<string>} A promise that resolves to a string containing the Ai-generated answer to the question.
+   * @throws {Error} - Response error
+   * @throws {Error} - Connection error
+   */
+  async aiAnswerQuestion (question) {
+    const systemInstructions = 'You are TextBuddy, an Ai-Text-Analyzer. Provide your best answer to the text according to the question provided.'
+    const userInstructions = `This is the text ${this.#text}. This is the Question: ${question}`
+
+    try {
+      return await this.#postChatCompletion(systemInstructions, userInstructions)
+    } catch (error) {
+      throw new Error(error.message)
+    }
+  }
+
+  /**
+   * Make a Chat completion Post to OpenAi's API.
+   *
+   * @param {string} systemInstructions - The system instructions.
+   * @param {string} userInstructions - The system instructions.
+   * @returns {Promise<string>} A promise that resolves to a string containing the Ai-generated answer to the question.
+   * @throws {Error} - Response error
+   * @throws {Error} - Connection error
+   */
+  async #postChatCompletion (systemInstructions, userInstructions) {
     if (!this.#openAiApiKey) {
       throw new Error('Must set API key to use Ai features.')
     }
@@ -239,10 +273,10 @@ class TextBuddy {
         model: 'gpt-3.5-turbo',
         messages: [{
           role: 'system',
-          content: 'You are TextBuddy, an Ai-Text-Analyzer. Provide your best analyzis of the text according to instructions.'
+          content: systemInstructions
         }, {
           role: 'user',
-          content: `Analyze the text below and return the language of the text. Your response should only consist of two letter to describe the language according to standard ISO 639-1, in lower case letters. You should not include any other characters or words in your response. your response should be strictly limited to two characters. If you are unable to decide the language, repond with 'Unknown language.'. Text to analyze: ${this.#text}`
+          content: userInstructions
         }]
       })
     }
