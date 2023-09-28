@@ -16,9 +16,8 @@ TextBuddy is a JavaScript module for text analysis. TextBuddy can assist you wit
 
 ## Live demo
 
-Try a live implementation of the module https://textbuddy-demo.aihonen.se
-
-View the implementation in the repository https://github.com/ta223dh/TextBuddy-Demo
+Live demo: https://textbuddy-demo.aihonen.se  
+Repository for the live demo: https://github.com/ta223dh/TextBuddy-Demo 
 
 _Note: Live demo has not yet incorporated the modules Ai-features._
 
@@ -57,7 +56,7 @@ https://platform.openai.com/account/api-keys
 
 ## Features and documentation
 Basic
-- [wordCount () ](module_documentation.md#wordcount)
+- [wordCount () ](module_documentation.md#wordcount-)
 - characterCount ()
 - characterCountExcludingSpaces ()
 - wordFrequency ()
