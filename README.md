@@ -1,5 +1,5 @@
-## ⚠️ Note
-**THIS IS A STUDENT PROJECT AND WORK IN PROGRESS. IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE.**
+## Note
+**⚠️ THIS IS A STUDENT PROJECT AND WORK IN PROGRESS. IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE.**
 
 ## TextBuddy
 TextBuddy is a JavaScript module for text analysis. TextBuddy can assist you with a wide range of tasks - from simple character count and word frequency to chatbot integration with OpenAi's API.
@@ -75,8 +75,7 @@ Create an issue on github to report a bug or suggest a new feature. Make a Pull 
 - Explain the feature, expected input and output, and why it is needed.
 
 **Pull requests**:
-For code contributions, the following requirements must be fullfilled:
-
+For code contributions, the following requirements must be fullfilled:  
 
 - Feature or bug has been described in an existing issue
 - Code is documented with JSDoc
