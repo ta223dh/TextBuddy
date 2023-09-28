@@ -1,4 +1,4 @@
-## Note
+## ⚠️ Note
 **THIS IS A STUDENT PROJECT AND WORK IN PROGRESS. IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE.**
 
 ## TextBuddy
@@ -76,6 +76,7 @@ Create an issue on github to report a bug or suggest a new feature. Make a Pull 
 
 **Pull requests**:
 For code contributions, the following requirements must be fullfilled:
+
 
 - Feature or bug has been described in an existing issue
 - Code is documented with JSDoc
