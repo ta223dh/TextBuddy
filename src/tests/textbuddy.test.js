@@ -42,9 +42,6 @@ test('Word count', t => {
   new TextBuddy('Five Words Five Words Five').wordCount() === 5 ? t.pass() : t.fail()
   new TextBuddy('Six Words six words SIX WORDS').wordCount() === 6 ? t.pass() : t.fail()
   new TextBuddy('SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN SEVEN').wordCount() === 7 ? t.pass() : t.fail()
-
-  // new TextBuddy('\n\n').getWordCount() === 0 ? t.pass() : t.fail()
-  // new TextBuddy('     ').getWordCount() === 0 ? t.pass() : t.fail()
 })
 
 /**

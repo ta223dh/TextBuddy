@@ -19,17 +19,21 @@ Once the module reaches version 1.0.0, it will be suitable be used by any projec
 - [Do you want to contribute to the project?](#do-you-want-to-contribute-to-the-project?)
 
 ## Example usage
-
 ```javascript
-const text = new TextBuddy('This is a text in English. It consists of eleven words.')
-const wordCount = text.wordCount() // 11
+try {
+    const text = new TextBuddy('This is a text in English. It consists of eleven words.')
+    const wordCount = text.wordCount() // 11
 
-text.setOpenAiApiKey('your-api-key')
-const language = text.aiGetLanguage // en 
+    text.setOpenAiApiKey('your-api-key')
+    const language = text.aiGetLanguage // en 
+} catch (error) {
+      console.log(error.message)
+}
 ```
 
 **See the module in action in an example project**  
-There is a demo-web-component available that was built as a front end to demonstrate a possible usage of TextBuddys features. TextBuddy does not include any frontend component by itself, and can be used in your project on either the frontend or backend.
+
+The live demo is a front end web component that uses the TextBuddy module to analyse a text directly in the browser. TextBuddy by itself does not have any frontend, and can be used in any type of project.
 
 **Live demo**: https://textbuddy-demo.aihonen.se  
 **Repository for the live demo**: https://github.com/ta223dh/TextBuddy-Demo  
