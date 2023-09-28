@@ -14,8 +14,9 @@ class TextBuddy {
   #openAiApiKey
 
   /**
+   * The class constructor.
    *
-   * @param text
+   * @param {string} text - The text to analyse.
    */
   constructor (text) {
     this.#text = text
@@ -23,7 +24,9 @@ class TextBuddy {
   }
 
   /**
+   * Returns an object containing all basic analysis available in the module.
    *
+   * @returns {Object} - One object with all the basic text analysis.
    */
   fullAnalyzis () {
     return {
@@ -39,7 +42,9 @@ class TextBuddy {
   }
 
   /**
+   * Get the text of this instance of TextBuddy.
    *
+   * @returns {string} - The text.
    */
   getText () {
     return this.#text
@@ -206,7 +211,7 @@ class TextBuddy {
   /**
    * Set an API Key to use the Ai methods.
    *
-   * @param {string} openAiApiKey
+   * @param {string} openAiApiKey - The OpenAi API Key to use for Ai features.
    */
   setOpenAiApiKey (openAiApiKey) {
     this.#openAiApiKey = openAiApiKey
