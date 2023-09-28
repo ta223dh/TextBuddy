@@ -2,7 +2,7 @@
 
 # Test reports
 Table of contents
-- [Version 0.1.0, 2023-09-28](#version-0.1.0,-2023-09-28)
+- [Version 0.1.0, 2023-09-28](#version-010-2023-09-28)
 
 
 ## Version 0.1.0, 2023-09-28
