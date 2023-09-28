@@ -9,8 +9,7 @@ It was created and is maintained by a student at Linneuniversiteten in Sweden as
 Once the module reaches version 1.0.0, it will be suitable be used by any project that needs a simple, dependency-free and modern module for analysing text.
 
 **Table of contents**
-- [Live demo](#features-and-documentation)
-- [Code example](#code-example)
+- [Example usage](#example-usage)
 - [Getting started](#getting-started-)
 - [Dependencies](#dependencies)
 - [Features and documentation](#features-and-documentation)
@@ -19,16 +18,7 @@ Once the module reaches version 1.0.0, it will be suitable be used by any projec
 - [Test reports](#test-reports)
 - [Do you want to contribute to the project?](#do-you-want-to-contribute-to-the-project?)
 
-## Live demo
-
-**Live demo**: https://textbuddy-demo.aihonen.se  
-**Repository for the live demo**: https://github.com/ta223dh/TextBuddy-Demo 
-
-_Note: Live demo has not yet incorporated the modules Ai-features._
-
-![](readme_live_demo.gif "Live demo")
-
-## Code example
+## Example usage
 
 ```javascript
 const text = new TextBuddy('This is a text in English. It consists of eleven words.')
@@ -37,6 +27,14 @@ const wordCount = text.wordCount() // 11
 text.setOpenAiApiKey('your-api-key')
 const language = text.aiGetLanguage // en 
 ```
+
+### Live demo
+There is a demo-web-component available that was built as a front end to demonstrate a possible usage of TextBuddys features. TextBuddy does not include any frontend component by itself, and can be used in your project on either the frontend or backend.
+
+**Live demo**: https://textbuddy-demo.aihonen.se  
+**Repository for the live demo**: https://github.com/ta223dh/TextBuddy-Demo  
+
+_Note: Live demo has not yet incorporated the modules Ai-features._
 
 ## Getting started 
 **Using the module**:
