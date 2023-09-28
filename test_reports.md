@@ -2,8 +2,8 @@
 
 # Test reports
 Table of contents
+- [Version 0.1.4, 2023-09-28](#version-014-2023-09-28)
 - [Version 0.1.0, 2023-09-28](#version-010-2023-09-28)
-- [Version 0.1.4, 2023-09-28](#version-012-2023-09-28)
 
 ## Version 0.1.4, 2023-09-28
 **Summary:**
