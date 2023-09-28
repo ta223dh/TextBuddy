@@ -27,7 +27,7 @@ try {
 
     text.setOpenAiApiKey('your-api-key')
     const language = text.aiGetLanguage // en  
-    
+
 } catch (error) {
       console.log(error.message)
 }
@@ -65,19 +65,19 @@ https://platform.openai.com/account/api-keys
 
 ## Features and documentation
 **Basic**
-- [wordCount () ](module_documentation.md#wordcount-)
-- characterCount ()
-- characterCountExcludingSpaces ()
-- wordFrequency ()
-- uniqueWordCount ()
-- longestWord ()
-- averageWordLength ()
-- esimatedReadingTimeInMinutes ()
-- wordFrequencyOfWord (word)
+- [wordCount()](module_documentation.md#wordCount)
+- [characterCount()](module_documentation.md#characterCount)
+- [characterCountExcludingSpaces()](module_documentation.md#characterCountExcludingSpaces)
+- [wordFrequency()](module_documentation.md#wordFrequency)
+- [uniqueWordCount()](module_documentation.md#uniqueWordCount)
+- [longestWord()](module_documentation.md#longestWord)
+- [averageWordLength()](module_documentation.md#averageWordLength)
+- [esimatedReadingTimeInMinutes()](module_documentation.md#esimatedReadingTimeInMinutes)
+- [wordFrequencyOfWord(word)](module_documentation.md#wordfrequencyofwordword)
 
 **Ai**
-- setOpenAiApiKey (key)
-- aiGetLanguage ()
+- [setOpenAiApiKey(key)](module_documentation.md#setopenaiapikeykey)
+- [aiGetLanguage()](module_documentation.md#aiGetLanguage)
 
 ## Known issues
 - The live demo needs to be updated to use the Ai-features.

@@ -9,8 +9,8 @@
 - [longestWord()](#longestWord)
 - [averageWordLength()](#averageWordLength)
 - [esimatedReadingTimeInMinutes()](#esimatedReadingTimeInMinutes)
-- [wordFrequencyOfWord()](#wordFrequencyOfWord)
-- [setOpenAiApiKey(key)](#setOpenAiApiKey-key)
+- [wordFrequencyOfWord()](#wordfrequencyofwordword)
+- [setOpenAiApiKey(key)](#setopenaiapikeykey)
 - [aiGetLanguage()](#aiGetLanguage)
 
 
