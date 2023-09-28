@@ -1,5 +1,5 @@
 ## ⚠️ Warning
-** THIS IS A STUDENT PROJECT AND WORK IN PROGRESS. IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE.**
+THIS IS A STUDENT PROJECT AND WORK IN PROGRESS. IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE.
 
 ## TextBuddy
 TextBuddy is a JavaScript module for text analysis. TextBuddy can assist you with a wide range of tasks - from simple character count and word frequency to chatbot integration with OpenAi's API.
@@ -43,9 +43,9 @@ Developing the module:
 
 https://platform.openai.com/account/api-keys
 
-## Features
+## Features and documentation
 Basic
-- wordCount () 
+- [wordCount () ](module_documentation.md#wordcount)
 - characterCount ()
 - characterCountExcludingSpaces ()
 - wordFrequency ()
@@ -62,6 +62,12 @@ Ai
 ## Known issues
 - The live demo needs to be updated to use the Ai-features.
 - The word counter should not count a single special character as a word. See issue: 
+
+## Version history
+See VERSION HISTORY
+
+## Test reports
+See TEST REPORTS
 
 ## Do you want to contribute to the project?
 Create an issue on github to report a bug or suggest a new feature. Make a Pull request to contribute new code. Check the issue list to see if there already is an existing issue before creating a new one.
