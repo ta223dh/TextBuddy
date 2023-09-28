@@ -4,6 +4,7 @@
 
 **Table of contents**
 **Basic**  
+
 - [getText()](#getText)
 - [fullAnalyzis()](#fullAnalyzis)
 - [wordCount()](#wordCount)
@@ -16,6 +17,7 @@
 - [estimatedReadingTimeInMinutes()](#estimatedReadingTimeInMinutes)
 - [wordFrequencyOfWord()](#wordfrequencyofwordword)
 **Ai**  
+
 - [setOpenAiApiKey(key)](#setopenaiapikeykey)
 - [aiGetLanguage()](#aiGetLanguage)
 - [aiAnswerQuestion(question)](#aiAnswerQuestion)
