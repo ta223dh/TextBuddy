@@ -1,7 +1,7 @@
 {
   "name": "textbuddy",
-  "version": "0.1.0",
-  "description": "TextBuddy is a JavaScript module for text analysis. Engineered to be your friendly digital sidekick, TextBuddy can assist you with a wide range of tasks - from simple word count and keyword extraction to advanced analysis with AI-integration.",
+  "version": "0.1.1",
+  "description": "TextBuddy is a JavaScript module for text analyzis. TextBuddy can assist you with a wide range of tasks - from simple character and word count to chatbot integration with OpenAi's API.",
   "main": "index.js",
   "type": "module",
   "scripts": {
