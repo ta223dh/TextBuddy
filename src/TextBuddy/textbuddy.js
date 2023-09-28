@@ -221,6 +221,8 @@ class TextBuddy {
    * Analyse and return the language of the text in the ISO 639-1 format.
    *
    * @returns {string} The language in IOS 639-1 format (for example 'en' for English).
+   * @throws {Error} - Response error
+   * @throws {Error} - Connection error
    */
   async aiGetLanguage () {
     if (!this.#openAiApiKey) {
