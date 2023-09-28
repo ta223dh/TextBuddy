@@ -85,10 +85,14 @@ https://platform.openai.com/account/api-keys
 **Ai**
 - [setOpenAiApiKey(key)](module_documentation.md#setopenaiapikeykey)
 - [aiGetLanguage()](module_documentation.md#aiGetLanguage)
-
+"   "
 ## Known issues
-- The live demo needs to be updated to use the Ai-features. INSERT ISSUE
-- The word counter should not count a single special character as a word. INSERT ISSUE
+**Live demo**
+- The live demo needs to be updated to use the Ai-features. [TBD-1](https://github.com/ta223dh/TextBuddy-Demo/issues/1)  
+
+**TextBuddy**
+- Handle special characters [TB-1](https://github.com/ta223dh/TextBuddy/issues/1)
+- The word counter should not count line breaks and tabs as words. [TB-2](https://github.com/ta223dh/TextBuddy/issues/2)
 
 ## Version history
 See [version history](https://github.com/ta223dh/TextBuddy/releases/)
