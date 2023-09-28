@@ -1,6 +1,6 @@
 Laboration 2
 - [testrapport.md](testrapport.md)
-- [reflektion.md](testrapport.md)
+- [reflektion.md](reflektion.md)
 
 ## ⚠️ Warning
 IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE IN A PRODUCTION ENVIRONMENT.
