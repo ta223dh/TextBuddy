@@ -1,6 +1,20 @@
 # TexBuddy module documentation
 
-## wordCount () 
+**Table of contents**
+- [wordCount()](#wordCount)
+- [characterCount()](#characterCount)
+- [characterCountExcludingSpaces()](#characterCountExcludingSpaces)
+- [wordFrequency()](#wordFrequency)
+- [uniqueWordCount()](#uniqueWordCount)
+- [longestWord()](#longestWord)
+- [averageWordLength()](#averageWordLength)
+- [esimatedReadingTimeInMinutes()](#esimatedReadingTimeInMinutes)
+- [wordFrequencyOfWord()](#wordFrequencyOfWord)
+- [setOpenAiApiKey(key)](#setOpenAiApiKey-key)
+- [aiGetLanguage()](#aiGetLanguage)
+
+
+## wordCount() 
 JSDoc
 ```javascript
  /**
@@ -12,7 +26,7 @@ JSDoc
 Example
 ```javascript
 const text = new TextBuddy('Two words.')
-const wordCount = text.wordCount
+const wordCount = text.wordCount()
 console.log(wordCount)
 ```
 
@@ -21,15 +35,210 @@ OutPut
 2
 ```
 
-## characterCount ()
-## characterCountExcludingSpaces ()
-## wordFrequency ()
-## uniqueWordCount ()
-## longestWord ()
-## averageWordLength ()
-## esimatedReadingTimeInMinutes ()
-## wordFrequencyOfWord (word)
+## characterCount()
+JSDoc
+```javascript
+/**
+   * Returns the character count.
+   *
+   * @returns {number} The number of characters in the text.
+   */
+```
+Example
+```javascript
+const text = new TextBuddy('Four')
+const count = text.characterCount()
+console.log(count)
+```
 
-## Ai
-## setOpenAiApiKey (key)
-## aiGetLanguage ()
+OutPut
+```javascript
+4
+```
+
+## characterCountExcludingSpaces()
+JSDoc
+```javascript
+ /**
+   * Returns the character count excluding spaces.
+   *
+   * @returns {number} The number of characters (excluding spaces) in the text.
+   */
+```
+Example
+```javascript
+const text = new TextBuddy('Four four')
+const count = text.characterCountExcludingSpaces()
+console.log(count)
+```
+
+OutPut
+```javascript
+8
+```
+
+## wordFrequency()
+JSDoc
+```javascript
+/**
+   * Returns a json object with each uniqe word and frequency of the word sorted with the most frequent word first.
+   *
+   * @returns {object} A json object with each uniqe word and frequency of the word sorted by desc freq.
+   */
+  ```
+Example
+```javascript
+const text = new TextBuddy('One one two')
+const freq = text.wordFrequency()
+console.log(freq)
+```
+
+OutPut
+```javascript
+{
+    one: 2,
+    two: 1
+}
+```
+
+## uniqueWordCount()
+JSDoc
+```javascript
+  /**
+   * Returns number representing the number of unique words.
+   *
+   * @returns {number} The number of unique words that occur in the text.
+   */
+  ```
+Example
+```javascript
+const text = new TextBuddy('One one two')
+const count = text.uniqueWordCount()
+console.log(count)
+```
+
+OutPut
+```javascript
+2
+```
+## longestWord()
+JSDoc
+```javascript
+/**
+   * Returns the longest word as a string.
+   *
+   * @returns {string} The longest word that occur in the text.
+   */
+  ```
+Example
+```javascript
+const text = new TextBuddy('short loooooong')
+const word = text.longestWord()
+console.log(word)
+```
+
+OutPut
+```javascript
+loooooong
+```
+## averageWordLength()
+JSDoc
+```javascript
+/**
+   * Returns the average word length as a number.
+   *
+   * @returns {string} The average length of all the words that occur in the text.
+   */
+  ```
+Example
+```javascript
+const text = new TextBuddy('four four four')
+const length = text.averageWordLength()
+console.log(length)
+```
+
+OutPut
+```javascript
+4
+```
+## esimatedReadingTimeInMinutes()
+JSDoc
+```javascript
+/**
+   * Returns the estimated reading time in minutes as a number.
+   *
+   * @returns {number} The estimated reading time in minutes.
+   */
+  ```
+Example
+```javascript
+const text = new TextBuddy('One')
+const minutes = text.esimatedReadingTimeInMinutes()
+console.log(minutes)
+```
+
+OutPut
+```javascript
+0.005
+```
+## wordFrequencyOfWord(word)
+JSDoc
+```javascript
+  /**
+   * Returns the frequency of a word.
+   *
+   * @param {string} word - The word to count.
+   * @returns {number} The frequency on the word.
+   */
+  ```
+Example
+```javascript
+const text = new TextBuddy('One two three')
+const freq = text.wordFrequencyOfWord('One')
+console.log(freq)
+```
+
+OutPut
+```javascript
+1
+```
+## setOpenAiApiKey(key)
+JSDoc
+```javascript
+/**
+   * Set an API Key to use the Ai methods.
+   *
+   * @param {string} openAiApiKey
+   */
+  ```
+Example
+```javascript
+const text = new TextBuddy('One two three')
+text.setOpenAiApiKey('my-api-key')
+```
+
+OutPut
+```javascript
+None
+```
+## aiGetLanguage()
+JSDoc
+```javascript
+ /**
+   * Analyse and return the language of the text in the ISO 639-1 format.
+   *
+   * @returns {string} The language in IOS 639-1 format (for example 'en' for English).
+   */
+  ```
+Example
+```javascript
+const text = new TextBuddy('The sun rises in the east and sets in the west.')
+text.setOpenAiApiKey('my-api-key')
+const language = text.aiGetLanguage()
+console.log(language)
+```
+
+OutPut
+```javascript
+en
+```
