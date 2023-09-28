@@ -49,6 +49,7 @@ _Note: The live demo has not yet incorporated the modules Ai-features._
 **Developing the module**:
 - `git clone` the project repo to your local folder
 - `cd TextBuddy` to navigage into the folder
+- `npm install` to install eslint for code standard and ava for unit tests
 - `code .` to open the project in your code editor
 - Unit tests: `npm run test`
 - Check lint issues: `npm run lint`
