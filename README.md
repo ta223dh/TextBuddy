@@ -28,13 +28,13 @@ text.setOpenAiApiKey('your-api-key')
 const language = text.aiGetLanguage // en 
 ```
 
-**Live demo**
+**See the module in action in an example project**  
 There is a demo-web-component available that was built as a front end to demonstrate a possible usage of TextBuddys features. TextBuddy does not include any frontend component by itself, and can be used in your project on either the frontend or backend.
 
 **Live demo**: https://textbuddy-demo.aihonen.se  
 **Repository for the live demo**: https://github.com/ta223dh/TextBuddy-Demo  
 
-_Note: Live demo has not yet incorporated the modules Ai-features._
+_Note: The live demo has not yet incorporated the modules Ai-features._
 
 ## Getting started 
 **Using the module**:
