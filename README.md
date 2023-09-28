@@ -4,6 +4,8 @@ THIS IS A STUDENT PROJECT AND WORK IN PROGRESS. IT IS RECOMMENDED TO WAIT UNTIL 
 ## TextBuddy
 TextBuddy is a JavaScript module for text analysis. TextBuddy can assist you with a wide range of tasks - from simple character count and word frequency to chatbot integration with OpenAi's API.
 
+See [full list of features](#features-and-documentation).
+
 ## Live demo
 
 Try a live implementation of the module https://textbuddy-demo.aihonen.se
