@@ -35,9 +35,11 @@ Developing the module:
 - Automaticallt fix lint issues (if possible): `npm run lint:fix`
 
 ## Dependencies
-**Basic features**: TextBuddy is created from the ground up without any dependence on external libraries. The code is all written in modern javascript.
+**Basic features**:
+- TextBuddy is created from the ground up without any dependence on external libraries. The code is all written in modern javascript.
 
-**Chatbot integration**: Provide your own API key, and TextBuddy will be able to utilize OpenAi's API for chat completion. This will require a network call to OpenAi's servers. For costs, limitations and privacy policy, refer to your OpenAi account agreement.
+**Chatbot integration**:
+- Provide your own API key, and TextBuddy will be able to utilize OpenAi's API for chat completion. This will require a network call to OpenAi's servers. For costs, limitations and privacy policy, refer to your OpenAi account agreement.
 
 https://platform.openai.com/account/api-keys
 
@@ -74,6 +76,7 @@ Create an issue on github to report a bug or suggest a new feature. Make a Pull 
 
 **Pull requests**:
 For code contributions, the following requirements must be fullfilled:
+
 - Feature or bug has been described in an existing issue
 - Code is documented with JSDoc
 - Code is using modern javascript syntax (ECMAScript 6 and later)
