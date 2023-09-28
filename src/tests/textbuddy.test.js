@@ -3,6 +3,17 @@ import TextBuddy from '../TextBuddy/textbuddy.js'
 
 /**
  * Test 0
+ * getText()
+ */
+test('Get text', t => {
+  new TextBuddy('').getText() === '' ? t.pass() : t.fail()
+  new TextBuddy(' ').getText() === ' ' ? t.pass() : t.fail()
+  new TextBuddy('Hello').getText() === 'Hello' ? t.pass() : t.fail()
+  new TextBuddy('Hello      world').getText() === 'Hello      world' ? t.pass() : t.fail()
+})
+
+/**
+ * Test 1
  * fullAnalyzis()
  */
 test('Full analyzis', t => {
@@ -17,17 +28,6 @@ test('Full analyzis', t => {
     'Estimated reading time in minutes': 0.015
   }
   compare(new TextBuddy('one two three').fullAnalyzis(), expectedResult) ? t.pass() : t.fail()
-})
-
-/**
- * Test 1
- * getText()
- */
-test('Get text', t => {
-  new TextBuddy('').getText() === '' ? t.pass() : t.fail()
-  new TextBuddy(' ').getText() === ' ' ? t.pass() : t.fail()
-  new TextBuddy('Hello').getText() === 'Hello' ? t.pass() : t.fail()
-  new TextBuddy('Hello      world').getText() === 'Hello      world' ? t.pass() : t.fail()
 })
 
 /**
