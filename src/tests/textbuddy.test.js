@@ -2,7 +2,7 @@ import test from 'ava'
 import TextBuddy from '../TextBuddy/textbuddy.js'
 
 /**
- * Test 1
+ * Test -1
  * Try invalid input values()
  */
 test('Invalid values', t => {
@@ -11,7 +11,7 @@ test('Invalid values', t => {
    *
    * @param {object} inputObject - The object to initiate.
    */
-  function tryInvalidValues (inputObject) {
+  function tryInvalidValues(inputObject) {
     try {
       inputObject()
       t.fail()
@@ -25,6 +25,35 @@ test('Invalid values', t => {
   tryInvalidValues(new TextBuddy([]))
   tryInvalidValues(new TextBuddy({}))
   tryInvalidValues(new TextBuddy(new Error()))
+})
+
+/**
+ * Test 0
+ * fullAnalyzis()
+ */
+test('Full analyzis', t => {
+  const expectedResult = {
+    'Word count': 3,
+    'Character count': 13,
+    'Character count excluding spaces': 11,
+    'Word frequency': { one: 1, two: 1, three: 1 },
+    'Unique word count': 3,
+    'Longest word': 'three',
+    'Average word length': 3.6666666666666665,
+    'Estimated reading time in minutes': 0.015
+  }
+  compare(new TextBuddy('one two three').fullAnalyzis(), expectedResult) ? t.pass() : t.fail()
+})
+
+/**
+ * Test 1
+ * getText()
+ */
+test('Get text', t => {
+  new TextBuddy('').getText() === '' ? t.pass() : t.fail()
+  new TextBuddy(' ').getText() === ' ' ? t.pass() : t.fail()
+  new TextBuddy('Hello').getText() === 'Hello' ? t.pass() : t.fail()
+  new TextBuddy('Hello      world').getText() === 'Hello      world' ? t.pass() : t.fail()
 })
 
 /**
@@ -77,18 +106,18 @@ test('Word frequency', t => {
   compare(new TextBuddy('One').wordFrequency(), { one: 1 }) ? t.pass() : t.fail()
   compare(new TextBuddy('Two two').wordFrequency(), { two: 2 }) ? t.pass() : t.fail()
   compare(new TextBuddy('One two two').wordFrequency(), { two: 2, one: 1 }) ? t.pass() : t.fail()
+})
 
-  /**
+/**
    * Helper method for comparing the content of objects.
    *
    * @param {object} objectOne - The first object.
    * @param {object} objectTwo - The second object.
    * @returns { boolean } - A boolean indicating if the objects contains the same keys and values.
    */
-  function compare (objectOne, objectTwo) {
-    return Object.entries(objectOne).toString() === Object.entries(objectTwo).toString()
-  }
-})
+function compare(objectOne, objectTwo) {
+  return Object.entries(objectOne).toString() === Object.entries(objectTwo).toString()
+}
 
 /**
  * Test 6

@@ -3,6 +3,8 @@
 # TexBuddy module documentation
 
 **Table of contents**
+- [fullAnalyzis()](#fullAnalyzis)
+- [getText()](#getText)
 - [wordCount()](#wordCount)
 - [characterCount()](#characterCount)
 - [characterCountExcludingSpaces()](#characterCountExcludingSpaces)
@@ -15,11 +17,60 @@
 - [setOpenAiApiKey(key)](#setopenaiapikeykey)
 - [aiGetLanguage()](#aiGetLanguage)
 
+## fullAnalyzis() 
+JSDoc
+```javascript
+/**
+   * Returns an object containing all basic analysis available in the module.
+   *
+   * @returns {object} - One object with all the basic text analysis.
+   */
+```
+Example
+```javascript
+const text = new TextBuddy('one two three')
+const fullAnalysis = text.fullAnalyzis()
+console.log(fullAnalysis)
+```
+
+OutPut
+```javascript
+{
+      'Word count': 3,
+      'Character count': 13,
+      'Character count excluding spaces': 11,
+      'Word frequency': { one: 1, two: 1, three: 1 }
+      'Unique word count': 3,
+      'Longest word':'three',
+      'Average word length': 3.6666666666666665,
+      'Estimated reading time in minutes': 0.015
+    }
+```
+
+## getText() 
+JSDoc
+```javascript
+ /**
+   * Get the text of this instance of TextBuddy.
+   *
+   * @returns {string} - The text.
+   */
+```
+Example
+```javascript
+const text = new TextBuddy('Two words.')
+console.log(text.getText())
+```
+
+OutPut
+```javascript
+Two words.
+```
 
 ## wordCount() 
 JSDoc
 ```javascript
- /**
+  /**
    * Returns the word count.
    *
    * @returns {number} The number of words in the text.
@@ -40,7 +91,7 @@ OutPut
 ## characterCount()
 JSDoc
 ```javascript
-/**
+ /**
    * Returns the character count.
    *
    * @returns {number} The number of characters in the text.
@@ -61,7 +112,7 @@ OutPut
 ## characterCountExcludingSpaces()
 JSDoc
 ```javascript
- /**
+/**
    * Returns the character count excluding spaces.
    *
    * @returns {number} The number of characters (excluding spaces) in the text.
@@ -82,7 +133,7 @@ OutPut
 ## wordFrequency()
 JSDoc
 ```javascript
-/**
+ /**
    * Returns a json object with each uniqe word and frequency of the word sorted with the most frequent word first.
    *
    * @returns {object} A json object with each uniqe word and frequency of the word sorted by desc freq.
@@ -106,7 +157,7 @@ OutPut
 ## uniqueWordCount()
 JSDoc
 ```javascript
-  /**
+ /**
    * Returns number representing the number of unique words.
    *
    * @returns {number} The number of unique words that occur in the text.
@@ -126,7 +177,7 @@ OutPut
 ## longestWord()
 JSDoc
 ```javascript
-/**
+ /**
    * Returns the longest word as a string.
    *
    * @returns {string} The longest word that occur in the text.
@@ -146,7 +197,7 @@ loooooong
 ## averageWordLength()
 JSDoc
 ```javascript
-/**
+ /**
    * Returns the average word length as a number.
    *
    * @returns {string} The average length of all the words that occur in the text.
@@ -166,7 +217,7 @@ OutPut
 ## esimatedReadingTimeInMinutes()
 JSDoc
 ```javascript
-/**
+ /**
    * Returns the estimated reading time in minutes as a number.
    *
    * @returns {number} The estimated reading time in minutes.
@@ -186,7 +237,7 @@ OutPut
 ## wordFrequencyOfWord(word)
 JSDoc
 ```javascript
-  /**
+/**
    * Returns the frequency of a word.
    *
    * @param {string} word - The word to count.
@@ -210,7 +261,7 @@ JSDoc
 /**
    * Set an API Key to use the Ai methods.
    *
-   * @param {string} openAiApiKey
+   * @param {string} openAiApiKey - The OpenAi API Key to use for Ai features.
    */
   ```
 Example
@@ -226,10 +277,12 @@ None
 ## aiGetLanguage()
 JSDoc
 ```javascript
- /**
+  /**
    * Analyse and return the language of the text in the ISO 639-1 format.
    *
    * @returns {string} The language in IOS 639-1 format (for example 'en' for English).
+   * @throws {Error} - Response error
+   * @throws {Error} - Connection error
    */
   ```
 Example

@@ -65,6 +65,8 @@ https://platform.openai.com/account/api-keys
 
 ## Features and documentation
 **Basic**
+- [fullAnalyzis()](module_documentation.md#fullAnalyzis)
+- [getText()](module_documentation.md#getText)
 - [wordCount()](module_documentation.md#wordCount)
 - [characterCount()](module_documentation.md#characterCount)
 - [characterCountExcludingSpaces()](module_documentation.md#characterCountExcludingSpaces)
