@@ -26,7 +26,7 @@ class TextBuddy {
   /**
    * Returns an object containing all basic analysis available in the module.
    *
-   * @returns {Object} - One object with all the basic text analysis.
+   * @returns {object} - One object with all the basic text analysis.
    */
   fullAnalyzis () {
     return {
