@@ -76,7 +76,7 @@ Ai
 - The word counter should not count a single special character as a word. See issue: 
 
 ## Version history
-See [version history](version_history_md)
+See [version history](version_history.md)
 
 ## Test reports
 See [test reports](test_reports.md)
