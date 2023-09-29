@@ -2,9 +2,9 @@
 
 # TextBuddy module documentation
 
-**Table of contents**
-**Basic**  
+**Table of contents**  
 
+Basic
 - [getText()](#getText)
 - [fullAnalyzis()](#fullAnalyzis)
 - [wordCount()](#wordCount)
@@ -16,8 +16,8 @@
 - [averageWordLength()](#averageWordLength)
 - [estimatedReadingTimeInMinutes()](#estimatedReadingTimeInMinutes)
 - [wordFrequencyOfWord()](#wordfrequencyofwordword)
-**Ai**  
 
+Ai
 - [setOpenAiApiKey(key)](#setopenaiapikeykey)
 - [aiGetLanguage()](#aiGetLanguage)
 - [aiAnswerQuestion(question)](#aiAnswerQuestion)
