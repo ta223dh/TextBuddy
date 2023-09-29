@@ -62,15 +62,15 @@ console.log(fullAnalysis)
 Output
 ```javascript
 {
-      'Word count': 3,
-      'Character count': 13,
-      'Character count excluding spaces': 11,
-      'Word frequency': { one: 1, two: 1, three: 1 },
-      'Unique word count': 3,
-      'Longest word':'three',
-      'Average word length': 3.6666666666666665,
-      'Estimated reading time in minutes': 0.015
-    }
+  'Word count': 3,
+  'Character count': 13,
+  'Character count excluding spaces': 11,
+  'Word frequency': { one: 1, two: 1, three: 1 },
+  'Unique word count': 3,
+  'Longest word':'three',
+  'Average word length': 3.6666666666666665,
+  'Estimated reading time in minutes': 0.015
+}
 ```
 
 ## wordCount() 
