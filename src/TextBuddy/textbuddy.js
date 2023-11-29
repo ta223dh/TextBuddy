@@ -258,13 +258,16 @@ class TextBuddy {
     try {
       const response = await fetch(url, options)
       if (!response.ok) {
-        throw new Error('Response error')
+
+        const json = await response.json()
+
+        throw new Error(json.error.message)
       }
       const data = await response.json()
       const answer = data.choices[0].message.content
       return answer
     } catch (error) {
-      throw new Error('Connection error')
+      throw new Error(error.message)
     }
   }
 }
