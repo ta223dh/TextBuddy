@@ -3,14 +3,6 @@
  */
 class TextBuddy {
   #text
-  #wordCount
-  #characterCount
-  #characterCountExcludingSpaces
-  #wordFrequency
-  #uniqueWordCount
-  #longestWord
-  #averageWordLength
-  #estimatedReadingTimeInMinutes
   #openAiApiKey
 
   /**
@@ -20,7 +12,6 @@ class TextBuddy {
    */
   constructor (text) {
     this.#text = text
-    this.#wordCount = null
   }
 
   /**
@@ -56,15 +47,14 @@ class TextBuddy {
    * @returns {number} The number of words in the text.
    */
   wordCount () {
-    if (!this.#wordCount) {
-      if (this.#text.trim().length === 0) {
-        this.#wordCount = 0
-      } else {
-        const spaces = /\s+/g // Regex
-        this.#wordCount = this.#text.trim().replace(spaces, ' ').split(' ').length
-      }
+    let wordCount = null
+    if (this.#text.trim().length === 0) {
+      wordCount = 0
+    } else {
+      const spaces = /\s+/g // Regex
+      wordCount = this.#text.trim().replace(spaces, ' ').split(' ').length
     }
-    return this.#wordCount
+    return wordCount
   }
 
   /**
@@ -73,10 +63,7 @@ class TextBuddy {
    * @returns {number} The number of characters in the text.
    */
   characterCount () {
-    if (!this.#characterCount) {
-      this.#characterCount = this.#text.length
-    }
-    return this.#characterCount
+    return this.#text.length
   }
 
   /**
@@ -85,10 +72,7 @@ class TextBuddy {
    * @returns {number} The number of characters (excluding spaces) in the text.
    */
   characterCountExcludingSpaces () {
-    if (!this.#characterCountExcludingSpaces) {
-      this.#characterCountExcludingSpaces = this.#text.replaceAll(' ', '').length
-    }
-    return this.#characterCountExcludingSpaces
+    return this.#text.replaceAll(' ', '').length
   }
 
   /**
@@ -97,29 +81,27 @@ class TextBuddy {
    * @returns {object} A JSON object with each uniqe word and frequency of the word sorted by desc freq.
    */
   wordFrequency () {
-    if (!this.#wordFrequency) {
-      if (this.#text.trim().length === 0) { return {} }
+    const wordFrequency = {}
 
-      const spaces = /\s+/g // Regex
-      const words = this.#text.trim().toLowerCase().replace(spaces, ' ').split(' ')
-
-      const wordFrequency = {}
-
-      words.forEach(word => {
-        if (!wordFrequency[word]) {
-          wordFrequency[word] = 1
-        } else {
-          wordFrequency[word] += 1
-        }
-      })
-
-      const array = Object.entries(wordFrequency)
-      const sortedArray = array.sort((a, b) => b[1] - a[1])
-      const sortedWordFrequency = Object.fromEntries(sortedArray)
-
-      this.#wordFrequency = sortedWordFrequency
+    if (this.#text.trim().length === 0) {
+      return wordFrequency
     }
-    return this.#wordFrequency
+    const spaces = /\s+/g // Regex
+    const words = this.#text.trim().toLowerCase().replace(spaces, ' ').split(' ')
+
+    words.forEach(word => {
+      if (!wordFrequency[word]) {
+        wordFrequency[word] = 1
+      } else {
+        wordFrequency[word] += 1
+      }
+    })
+
+    const array = Object.entries(wordFrequency)
+    const sortedArray = array.sort((a, b) => b[1] - a[1])
+    const sortedWordFrequency = Object.fromEntries(sortedArray)
+
+    return sortedWordFrequency
   }
 
   /**
@@ -128,11 +110,9 @@ class TextBuddy {
    * @returns {number} The number of unique words that occur in the text.
    */
   uniqueWordCount () {
-    if (!this.#uniqueWordCount) {
-      const wordFrequency = this.wordFrequency(this.#text)
-      this.#uniqueWordCount = Object.keys(wordFrequency).length
-    }
-    return this.#uniqueWordCount
+    const wordFrequency = this.wordFrequency(this.#text)
+
+    return Object.keys(wordFrequency).length
   }
 
   /**
@@ -141,19 +121,16 @@ class TextBuddy {
    * @returns {string} The longest word that occur in the text.
    */
   longestWord () {
-    if (!this.#longestWord) {
-      const wordFrequency = this.wordFrequency(this.#text)
-      let longestWord = ''
+    let longestWord = ''
+    const wordFrequency = this.wordFrequency(this.#text)
 
-      for (const word in wordFrequency) {
-        if (longestWord.length < word.length) {
-          longestWord = word
-        }
+    for (const word in wordFrequency) {
+      if (longestWord.length < word.length) {
+        longestWord = word
       }
-      this.#longestWord = longestWord
     }
 
-    return this.#longestWord
+    return longestWord
   }
 
   /**
@@ -162,21 +139,22 @@ class TextBuddy {
    * @returns {string} The average length of all the words that occur in the text.
    */
   averageWordLength () {
-    if (!this.#averageWordLength) {
-      if (this.#text.trim().length === 0) { return 0 }
-
-      const wordFrequency = this.wordFrequency(this.#text)
-      let numberOfWords = 0
-      let combinedLength = 0
-
-      for (const [key, value] of Object.entries(wordFrequency)) {
-        combinedLength += key.length * value
-        numberOfWords += value
-      }
-      this.#averageWordLength = combinedLength / numberOfWords
+    let averageWordLength = 0
+    if (this.#text.trim().length === 0) {
+      return averageWordLength
     }
 
-    return this.#averageWordLength
+    const wordFrequency = this.wordFrequency(this.#text)
+    let numberOfWords = 0
+    let combinedLength = 0
+
+    for (const [key, value] of Object.entries(wordFrequency)) {
+      combinedLength += key.length * value
+      numberOfWords += value
+    }
+    averageWordLength = combinedLength / numberOfWords
+
+    return averageWordLength
   }
 
   /**
@@ -185,11 +163,8 @@ class TextBuddy {
    * @returns {number} The estimated reading time in minutes.
    */
   estimatedReadingTimeInMinutes () {
-    if (!this.#estimatedReadingTimeInMinutes) {
-      /* Assumed 200 words per minute average speed */
-      this.#estimatedReadingTimeInMinutes = this.wordCount() / 200
-    }
-    return this.#estimatedReadingTimeInMinutes
+    /* Assumed 200 words per minute average speed */
+    return this.wordCount() / 200
   }
 
   /**
