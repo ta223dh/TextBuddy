@@ -4,7 +4,7 @@ Kapitel 2 var enligt mig ett av de bästa kapitlen. Mycket går att vinna genom 
 
 Ett eget exempel är att min kod itererade igenom key & values i ett objekt. Under workshop 2, så gick en annan student igenom denna kod, och det var svårt för studenten att veta vad dessa key & values representerade. Det krävdes mental mappning, alltså att hålla koll i huvudet vad som fanns i detta objekt, för att helt kunna förstå koden. Denna kod har jag sedan dess förbättrat enligt nedan, med att byta ut key & value till word och frequenzy.
 
-![](chap2.png "Chap2")
+![](img/chap2.png "Chap2")
 
 Två andra exempel som jag upplevde under workshops var att:
 
@@ -20,7 +20,7 @@ I kursens workshops så upplevde jag att detta stämde - när jag läser kod så
 
 När jag skriver kod, så upplever jag dock en stark vilja att hålla ihop funktionalitet. T.ex så argumenterar boken att error handling är "1 sak", och att det bör brytas ut. Men t.ex. i funktionen nedan så har jag valt att ha error handling i funktionen, för att hålla ihop koden och inte sprida ut den. Om alla funktioner skulle reduceras till minimum, så skuylle det bli väldigt många funktioner i denna klass. En reflektion kring detta är att det kanske fungerar bra om man då även skapar flera klasser och "håller ihop" funktionaliteten på det viset. Det går alltså inte att rakt av applicera en regel från boken, ibland så skulle även en liten regel kräva stora omskrivningar av koden.
 
-![](chap3.png "Chap3")
+![](img/chap3.png "Chap3")
 
 ## Chapter 4: Comments
 
@@ -28,7 +28,7 @@ Kapitlet argumenterar för att kommentering av kod till stor del är redundant. 
 
 Ett exempel på detta i projektets kod är att förklara varför genomsnittsläshastigheten är satt till 200 år. Detta görs genom att skriva att det är en assumption och hänvisa till en källa.
 
-![](chap4.png "Chap4")
+![](img/chap4.png "Chap4")
 
 ## Chapter 5: Formatting
 
@@ -38,7 +38,7 @@ Vid formattering så argumenterar boken för att det viktigt att följa gemensam
 
 Ett  exempel på vertikal distans är att en privat metod ligger direkt under dom publika metoderna som använder sig av den. Se bild nedan.
 
-![](chap5.png "Chap5")
+![](img/chap5.png "Chap5")
 
 
 ## Chapter 6: Objects and data structures
@@ -49,13 +49,13 @@ Det finns en regel som kallas för "Law of Demeter", denna säger att man ska pr
 
 Det närmast ett "train wreck" som hittas i detta projekt är koden nedan. Den är därför utbryten till en privat metod med ett beskrivande metodnamn. Notera att den använder sig av språkets stringmetoder, det är därför inga riktiga "främlingar" i detta fall.
 
-![](chap6.png "Chap6")
+![](img/chap6.png "Chap6")
 
 ## Chapter 7: Error Handling
 
 Kapitel sju argumenterar för att felhantering bör skötas genom att kasta undantag. Funktioner bör inte returnera null eller en statuskod. Ett exempel i detta projekt är metoderna som använder OpenAi's API. Dessa kastar ett undantag om anslutningen misslyckades, eller om server returnerar en felkod. Den inkluderar även anledningen till att undantaget kastades, för att underlätta felsökning (Provide Context With Exceptions).
 
-![](chap7.png "Chap7")
+![](img/chap7.png "Chap7")
 
 ## Chapter 8: Boundaries
 
@@ -63,7 +63,7 @@ Detta kapitel handlar om tredjepartskod. Ett sätt att använda sig av kod från
 
 I detta projekt så finns automatiska tester mot OpenAi's API. Genom att regelbundet köra testerna, så kan jag upptäcka ändringar hos OpenAi och bli notifierad när min implementation inte längre fungerar.
 
-![](chap8.png "Chap8")
+![](img/chap8.png "Chap8")
 
 ## Chapter 9: Unit tests
 
@@ -73,7 +73,7 @@ Detta gör så att all kod alltid grundar sig på att det finns ett testfall som
 
 I detta projekt så används enhetstester, men följde inte TDD. Enhetstesterna har dock varit till stor hjälp, då det har skapat ett förtroende till att kunna göra ändring i modulen och vara säker på att ingen av den specificerade funktionaliteten har slutat fungera. Detta har gjort så att det känns enkelt att göra ändring i modulen. Om jag inte hade haft enhetstester så hade jag nog varit rätt för att göra ändringar, då jag inte kunde känna mig säker på att något i modulen skulle sluta fungera.
 
-![](chap9.png "Chap9")
+![](img/chap9.png "Chap9")
 
 ## Chapter 10: Classes
 
@@ -81,7 +81,7 @@ Kapitlet om klasser känns till stor del mycket liknande tidigare kapiel. Inkaps
 
 I projektets webbapplikation så har appen delats upp i webbkomponenter. Där chatten är en separat webkomponent som kan lyftas ut och sättas in i ett annat projekt.
 
-![](chap10.png "Chap10")
+![](img/chap10.png "Chap10")
 
 
 ## Chapter 11: Systems
@@ -90,6 +90,6 @@ Detta kapitel argumenterar för att även system som helhet behöver vara "clean
 
 Ett sätt som detta projekt är "clean" på systemnivå, är uppdelningen mellan modulen och applikationen. Modulen i sig är helt fristående och har ingen dependency på applikationen. Applikationen i sin tur har definierat en specifik version av modulen som ska användas.
 
-![](chap11.png "Chap11")
+![](img/chap11.png "Chap11")
 
 För ytterligare "clean code", så skulle applikationen kunna definiera ett interface som den använder sig av. Sedan även modulerna vara enkla att byta ut då, då modulerna bara behöver kopplas till att uppfylla interfacets specifikationer.

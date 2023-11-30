@@ -13,7 +13,7 @@ Table of contents
 
 **Unit tests**: _src/tests/textbuddy.test.js_  
 
-![](unittest0112.png "Chap2")
+![](img/unittest0112.png "Chap2")
 
 ## Version 0.1.4, 2023-09-28
 **Summary:**
