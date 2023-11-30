@@ -1,5 +1,7 @@
 ## ⚠️ Warning
-IT IS RECOMMENDED TO WAIT UNTIL VERSION 1.0.0 BEFORE USING THIS PACKAGE IN A PRODUCTION ENVIRONMENT.
+This is a new module under active development. It is adviced to wait until version 1.0.0 before using this package in a production enviromment.
+
+See [Known issues](#known-issues) for more information.
 
 ## TextBuddy
 **TextBuddy** is a JavaScript module for text analyzis. TextBuddy can assist you with a wide range of tasks - from simple character and word count to chatbot integration with OpenAi's API.  
@@ -10,7 +12,7 @@ Once the module reaches version 1.0.0, it will be suitable for use by any projec
 
 **Table of contents**
 - [Example usage](#example-usage)
-- [Example project implementation](#example-project-implementation)
+- [TextBuddy web application](#example-project-implementation)
 - [Getting started](#getting-started-)
 - [Dependencies](#dependencies)
 - [Features and documentation](#features-and-documentation)
@@ -22,25 +24,29 @@ Once the module reaches version 1.0.0, it will be suitable for use by any projec
 ## Example usage
 ```javascript
 const text = new TextBuddy('This is a text in English. It consists of eleven words.')
-const wordCount = text.wordCount() // 11
+const wordCount = text.wordCount() // Output: 11
 
 text.setOpenAiApiKey('your-api-key')
 
 try {  
-    const language = await text.aiGetLanguage() // en  
+    const language = await text.aiGetLanguage() // Output: en  
 } catch (error) {
       console.log(error.message)
 }
 ```
 
-## Example project implementation
+## TextBuddy web application
 
-The live demo is a front end web component that uses the TextBuddy module to analyze a text directly in the browser. TextBuddy by itself does not have any frontend, and can be used in any type of project.
+The TextBuddy javascript module is the engine driving a TextBuddy web application where users can get instant insights about their text.
 
-**Live demo**: https://textbuddy-demo.aihonen.se  
-**Repository for the live demo**: https://github.com/ta223dh/TextBuddy-Demo  
+The TextBuddy web application and TextBuddy javascript module are both part of a student project, but are completely stand alone projects.
 
-_Note: The live demo has not yet incorporated the modules Ai-features._
+The TextBuddy web application is an product implementation of the TextBuddy javascript module. The javascript module by itself does not have any frontend, and can be used in any type of project.
+
+The web application can be seen as one example of what the javascript module is capable of.
+
+**TextBuddy web application**: https://textbuddy.aihonen.se  
+**Repository for web application**: https://github.com/ta223dh/TextBuddy-Application 
 
 ## Getting started 
 **Using the module**:
@@ -89,8 +95,6 @@ https://platform.openai.com/account/api-keys
 - [aiAnswerQuestion(question)](module_documentation.md#aiAnswerQuestionquestion)
 
 ## Known issues
-**Live demo**
-- The live demo needs to be updated to use the Ai-features. [TBD-1](https://github.com/ta223dh/TextBuddy-Demo/issues/1)  
 
 **TextBuddy**
 - Handle special characters [TB-1](https://github.com/ta223dh/TextBuddy/issues/1)

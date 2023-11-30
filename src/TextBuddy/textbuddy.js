@@ -214,8 +214,9 @@ class TextBuddy {
    * @throws {Error} - Connection error
    */
   async aiAnswerQuestion (question) {
-    const systemInstructions = 'You are TextBuddy, an Ai-Text-Analyzer. Provide your best answer to the text according to the question provided.'
-    const userInstructions = `This is the text ${this.#text}. This is the Question: ${question}`
+    const systemInstructions = `You are TextBuddy, an Ai-Text-Analyzer. Provide your best answer to any future questions regarding the text provided. This is the text:
+    ${this.#text}`
+    const userInstructions = `${question}`
 
     try {
       return await this.#postChatCompletion(systemInstructions, userInstructions)
@@ -258,9 +259,7 @@ class TextBuddy {
     try {
       const response = await fetch(url, options)
       if (!response.ok) {
-
         const json = await response.json()
-
         throw new Error(json.error.message)
       }
       const data = await response.json()
