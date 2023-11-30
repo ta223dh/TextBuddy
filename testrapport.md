@@ -2,8 +2,18 @@
 
 # Test reports
 Table of contents
+- [Version 0.1.12, 2023-11-30](#version-0112-2023-11-30)
 - [Version 0.1.4, 2023-09-28](#version-014-2023-09-28)
 - [Version 0.1.0, 2023-09-28](#version-010-2023-09-28)
+
+## Version 0.1.12, 2023-11-30
+**Summary:**
+- Code cleanup and refactor
+- All unit tests passed without errors ✅  
+
+**Unit tests**: _src/tests/textbuddy.test.js_  
+
+![](unittest0112.png "Chap2")
 
 ## Version 0.1.4, 2023-09-28
 **Summary:**
