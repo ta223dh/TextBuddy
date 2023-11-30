@@ -51,9 +51,9 @@ class TextBuddy {
     if (this.#text.trim().length === 0) {
       wordCount = 0
     } else {
-      const multipleSpaces = /\s+/g // Regex to find one or more spaces is sequence
+      const regexForMultipleSpaces = /\s+/g
       const oneSpace = ' '
-      wordCount = this.#text.trim().replace(multipleSpaces, oneSpace).split(' ').length
+      wordCount = this.#text.trim().replace(regexForMultipleSpaces, oneSpace).split(' ').length
     }
     return wordCount
   }
@@ -87,8 +87,8 @@ class TextBuddy {
     if (this.#text.trim().length === 0) {
       return wordFrequency
     }
-    const spaces = /\s+/g // Regex
-    const words = this.#text.trim().toLowerCase().replace(spaces, ' ').split(' ')
+
+    const words = this.#toLowerCaseWords(this.text)
 
     words.forEach(word => {
       if (!wordFrequency[word]) {
@@ -103,6 +103,19 @@ class TextBuddy {
     const sortedWordFrequency = Object.fromEntries(sortedArray)
 
     return sortedWordFrequency
+  }
+
+  /**
+   * Convert a string into a lower case array of words.
+   *
+   * @param {string} text The text to be converted into a lower case words array.
+   * @returns {Array} The array of words.
+   */
+  #toLowerCaseWords (text) {
+    const regexForMultipleSpaces = /\s+/g
+    const oneSpace = ' '
+
+    return this.#text.trim().toLowerCase().replace(regexForMultipleSpaces, oneSpace).split(' ')
   }
 
   /**
@@ -164,7 +177,7 @@ class TextBuddy {
    * @returns {number} The estimated reading time in minutes.
    */
   estimatedReadingTimeInMinutes () {
-    /* Assumed 200 words per minute average speed */
+    /* Assumed 200 words per minute average speed. Source: https://irisreading.com/what-is-the-average-reading-speed/ */
     return this.wordCount() / 200
   }
 
@@ -197,8 +210,7 @@ class TextBuddy {
    * Analyze and a return the language of the text in the ISO 639-1 format.
    *
    * @returns {Promise<string>} A promise that resolves to a string containing the  language in ISO 639-1 format (for example 'en' for English).
-   * @throws {Error} - Response error
-   * @throws {Error} - Connection error
+   * @throws {Error} - Error
    */
   async aiGetLanguage () {
     const systemInstructions = 'You are TextBuddy, an Ai-Text-Analyzer. Provide your best analyzis of the text according to instructions.'
@@ -211,8 +223,7 @@ class TextBuddy {
    *
    * @param {string} question - The question.
    * @returns {Promise<string>} A promise that resolves to a string containing the Ai-generated answer to the question.
-   * @throws {Error} - Response error
-   * @throws {Error} - Connection error
+   * @throws {Error} - Error
    */
   async aiAnswerQuestion (question) {
     const systemInstructions = `You are TextBuddy, an Ai-Text-Analyzer. Provide your best answer to any future questions regarding the text provided. This is the text:
@@ -232,8 +243,7 @@ class TextBuddy {
    * @param {string} systemInstructions - The system instructions.
    * @param {string} userInstructions - The system instructions.
    * @returns {Promise<string>} A promise that resolves to a string containing the Ai-generated answer to the question.
-   * @throws {Error} - Response error
-   * @throws {Error} - Connection error
+   * @throws {Error} - Error
    */
   async #postChatCompletion (systemInstructions, userInstructions) {
     if (!this.#openAiApiKey) {

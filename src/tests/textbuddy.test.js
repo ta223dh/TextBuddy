@@ -157,7 +157,7 @@ test('Word frequency of word', t => {
  * Test 11
  * aiGetLanguage()
  */
-const OPENAI_API_KEY = null
+const OPENAI_API_KEY = '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'
 
 test('aiGetLanguage', async t => {
   const sentences = [
