@@ -42,7 +42,7 @@ class TextBuddy {
   }
 
   /**
-   * Returns the word count.
+   * Returns the word count as a number.
    *
    * @returns {number} The number of words in the text.
    */
@@ -137,7 +137,7 @@ class TextBuddy {
   /**
    * Returns the average word length as a number.
    *
-   * @returns {string} The average length of all the words that occur in the text.
+   * @returns {number} The average length of all the words that occur in the text.
    */
   averageWordLength () {
     let averageWordLength = 0
