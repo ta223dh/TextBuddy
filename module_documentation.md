@@ -283,8 +283,7 @@ JSDoc
    * Analyse and return the language of the text in the ISO 639-1 format.
    *
    * @returns {string} The language in ISO 639-1 format (for example 'en' for English).
-   * @throws {Error} - Response error
-   * @throws {Error} - Connection error
+   * @throws {Error} - Error
    */
   ```
 Example
@@ -308,8 +307,7 @@ JSDoc
    *
    * @param {string} question - The question.
    * @returns {Promise<string>} A promise that resolves to a string containing the Ai-generated answer to the question.
-   * @throws {Error} - Response error
-   * @throws {Error} - Connection error
+   * @throws {Error} - Error
    */
   ```
 Example
