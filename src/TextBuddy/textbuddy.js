@@ -175,11 +175,11 @@ class TextBuddy {
    * @returns {number} The frequency on the word.
    */
   wordFrequencyOfWord (word) {
-    const wordFrequency = this.wordFrequency(this.#text)
-    const wordFrequencyOfWord = wordFrequency[word.toLowerCase()]
+    const frequencyOfAllWords = this.wordFrequency(this.#text)
+    const frequencyOfWord = frequencyOfAllWords[word.toLowerCase()]
 
-    if (wordFrequencyOfWord !== null && typeof wordFrequencyOfWord === 'number') {
-      return wordFrequencyOfWord
+    if (frequencyOfWord !== null && typeof frequencyOfWord === 'number') {
+      return frequencyOfWord
     }
     return 0
   }
