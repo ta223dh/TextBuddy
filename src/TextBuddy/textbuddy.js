@@ -51,8 +51,9 @@ class TextBuddy {
     if (this.#text.trim().length === 0) {
       wordCount = 0
     } else {
-      const spaces = /\s+/g // Regex
-      wordCount = this.#text.trim().replace(spaces, ' ').split(' ').length
+      const multipleSpaces = /\s+/g // Regex to find one or more spaces is sequence
+      const oneSpace = ' '
+      wordCount = this.#text.trim().replace(multipleSpaces, oneSpace).split(' ').length
     }
     return wordCount
   }
@@ -148,9 +149,9 @@ class TextBuddy {
     let numberOfWords = 0
     let combinedLength = 0
 
-    for (const [key, value] of Object.entries(wordFrequency)) {
-      combinedLength += key.length * value
-      numberOfWords += value
+    for (const [word, frequency] of Object.entries(wordFrequency)) {
+      combinedLength += word.length * frequency
+      numberOfWords += frequency
     }
     averageWordLength = combinedLength / numberOfWords
 
